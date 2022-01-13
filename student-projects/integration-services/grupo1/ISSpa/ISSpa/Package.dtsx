@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{90EE4C8F-FE66-48D5-B78E-F8B84C414085}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{F2B3A2DE-81CC-40E9-87E1-F17F6C875257}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAb15D/eCVQkWq9S4ba5FFBAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADvKd3xBwMTen9ApF5LRdgvfOvgE3qm1rhkvRbqNE6lkAAAAAAOgAAAAAIAACAAAAAFUtNBMoaZ2/EJG64F2iD8UXfbsHwf+rkDlgxzXjMkbRAAAAAWTpZgMzR7xYVQfuoUleMQQAAAAHxzuPi66pbe6syi6Iy40088X4RL28tW369o59gosl9JH5lG59y4F5Fix5Yp/kkJku1z9/cfqQsyOq3DP+bX2DM</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAb15D/eCVQkWq9S4ba5FFBAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACSeG+7rNZKTtLhfwhbOEZRHlnVUMvR7Cxc8zYD2SzgcgAAAAAOgAAAAAIAACAAAAChNs99Lj6XTXobowPJTL9m3RySXAvNh5IRBE9bEf5QjxAAAACD5l7cLwULP8ShAbYmOSbWQAAAAPmZIZk1uzWd3+rr8jE7FYE1skY06ZbxCzXf+L74OHqXSza/mySSVDEbNErQiPqjx95wPEMDESHsNGdnxZn+eYc</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAb15D/eCVQkWq9S4ba5FFBAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAHWAZC89Qs146x+CVDaULG3h3V/NFPpQal5dAx9U9RTwAAAAAOgAAAAAIAACAAAADwLgyxAyLviUwrB4CXW7QsiZzAWeeoXK+BLxid6hKODxAAAADZhMUNeL/am2CQFR2C2StRQAAAAHYOg+ciOpOXF3811lz/R++lMJAhNMkJuLMfAlZMbXGqc7qffUlZ8JCtd2EVCqesugkCTLb+UhQolgLKvxeI/fk</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAb15D/eCVQkWq9S4ba5FFBAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADqBXc8bXAsxUOPklLdepEDXB720Xy9ePQ4gu88b7euBwAAAAAOgAAAAAIAACAAAADevx4GInQZhiQHhr6dE7FjLpf4F/ZM3Zn8YMnwsqNeWhAAAAD++AZGAnM0oVbiaxZRzFTQQAAAAFZAi3lURyKSOrkMRBVFdhHbtctdDOgxVF7nfP9fXph/J6GLVaQUdIcYiK/Py9kkcUp9Pj48clQuWKhBYXpkQnA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -2279,6 +2279,23 @@ from Cliente c</property>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{F9480482-1781-445C-BFB4-DADB07167755}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{EE582C76-221A-420D-8261-DFF7DCE3F9B8}"
+          SQLTask:SqlStatementSource="DELETE FROM Tb_Resultados_&#xA;DELETE FROM Dm_Trabajador&#xA;DELETE FROM Dm_Servicios&#xA;DELETE FROM DM_Prod&#xA;DELETE FROM Dm_Fech&#xA;DELETE FROM DM_Clientes&#xA;&#xA;&#xA;DBCC CHECKIDENT ('[Dm_Trabajador]',RESEED,0)&#xA;DBCC CHECKIDENT ('[Dm_Servicios]',RESEED,0)&#xA;DBCC CHECKIDENT ('[DM_Prod]',RESEED,0)&#xA;DBCC CHECKIDENT ('[Dm_Fech]',RESEED,0)&#xA;DBCC CHECKIDENT ('[DM_Clientes]',RESEED,0)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
@@ -2321,6 +2338,46 @@ from Cliente c</property>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restricción 4"
       DTS:To="Package\Llenar Resultados" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{736DA978-19FB-4DC6-AF52-FAB75AB0F281}"
+      DTS:From="Package\Tarea Ejecutar SQL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 5"
+      DTS:To="Package\Llenar Producto" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{FF371428-4246-445E-94A6-89EDFBE4D415}"
+      DTS:From="Package\Tarea Ejecutar SQL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 6"
+      DTS:To="Package\LLenar Fecha" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 7]"
+      DTS:CreationName=""
+      DTS:DTSID="{80AAF14F-5892-4679-B7ED-3621B64FDB33}"
+      DTS:From="Package\Tarea Ejecutar SQL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 7"
+      DTS:To="Package\LLenar Trabajador" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 8]"
+      DTS:CreationName=""
+      DTS:DTSID="{B3B5BF0F-094C-4DF0-BD2E-9F7242F914E2}"
+      DTS:From="Package\Tarea Ejecutar SQL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 8"
+      DTS:To="Package\Lllenar Cliente" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 9]"
+      DTS:CreationName=""
+      DTS:DTSID="{0AD10D3C-3288-4683-A937-23AE90C32925}"
+      DTS:From="Package\Tarea Ejecutar SQL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 9"
+      DTS:To="Package\Llenar Servicios" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
@@ -2333,34 +2390,38 @@ from Cliente c</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="151.2,41.6"
-          Id="Package\Llenar Servicios"
-          TopLeft="120.817462281305,88.5980403811049" />
-        <NodeLayout
-          Size="144.8,41.6"
-          Id="Package\Lllenar Cliente"
-          TopLeft="309.523814794969,83.2679750240111" />
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\LLenar Trabajador"
-          TopLeft="461.111118963787,82.4183018094804" />
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="140.8,41.6"
           Id="Package\LLenar Fecha"
-          TopLeft="646.031757033601,84.9673214530725" />
+          TopLeft="636.210328294915,179.599675721432" />
         <NodeLayout
           Size="152,41.6"
           Id="Package\Llenar Producto"
-          TopLeft="817.460331381584,84.9673214530725" />
+          TopLeft="807.638902642898,179.599675721432" />
         <NodeLayout
           Size="161.6,41.6"
           Id="Package\Llenar Resultados"
-          TopLeft="464.285722192453,256.601310788279" />
+          TopLeft="454.464293453767,351.233665056639" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\Llenar Servicios"
+          TopLeft="110.996033542619,183.230394649464" />
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\LLenar Trabajador"
+          TopLeft="451.289690225101,177.05065607784" />
+        <NodeLayout
+          Size="144.8,41.6"
+          Id="Package\Lllenar Cliente"
+          TopLeft="299.702386056283,177.900329292371" />
+        <NodeLayout
+          Size="169.6,41.6"
+          Id="Package\Tarea Ejecutar SQL"
+          TopLeft="446.428579031205,29.632353356759" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
-          TopLeft="196.417462281305,130.198040381105">
+          TopLeft="186.596033542619,224.830394649465">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2394,7 +2455,7 @@ from Cliente c</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 1]"
-          TopLeft="893.460331381584,126.567321453073">
+          TopLeft="883.638902642898,221.199675721433">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2428,7 +2489,7 @@ from Cliente c</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 2]"
-          TopLeft="716.431757033601,126.567321453072">
+          TopLeft="706.610328294915,221.199675721432">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2462,7 +2523,7 @@ from Cliente c</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 3]"
-          TopLeft="544.29842057812,124.01830180948">
+          TopLeft="534.476991839434,218.65065607784">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2484,7 +2545,7 @@ from Cliente c</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 4]"
-          TopLeft="381.923814794969,124.867975024011">
+          TopLeft="372.102386056283,219.500329292371">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2516,172 +2577,180 @@ from Cliente c</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 5]"
+          TopLeft="585.095245697872,71.232353356759">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="298.543656945026,108.367322364673"
+              Start="0,0"
+              End="298.543656945026,100.867322364673">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.9645377748896" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.9645377748896"
+                    Point2="0,28.9645377748896"
+                    Point3="4,28.9645377748896" />
+                  <mssgle:LineSegment
+                    End="294.543656945026,28.9645377748896" />
+                  <mssgle:CubicBezierSegment
+                    Point1="294.543656945026,28.9645377748896"
+                    Point2="298.543656945026,28.9645377748896"
+                    Point3="298.543656945026,32.9645377748896" />
+                  <mssgle:LineSegment
+                    End="298.543656945026,100.867322364673" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 6]"
+          TopLeft="558.161912364538,71.232353356759">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="148.448415930376,108.367322364673"
+              Start="0,0"
+              End="148.448415930376,100.867322364673">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.9545961740823" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39.9545961740823"
+                    Point2="0,43.9545961740823"
+                    Point3="4,43.9545961740823" />
+                  <mssgle:LineSegment
+                    End="144.448415930376,43.9545961740823" />
+                  <mssgle:CubicBezierSegment
+                    Point1="144.448415930376,43.9545961740823"
+                    Point2="148.448415930376,43.9545961740823"
+                    Point3="148.448415930376,47.9545961740823" />
+                  <mssgle:LineSegment
+                    End="148.448415930376,100.867322364673" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 7]"
+          TopLeft="532.459134628153,71.232353356759">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,105.818302721081"
+              Start="0,0"
+              End="0,98.3183027210809">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,98.3183027210809" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 8]"
+          TopLeft="504.295245697872,71.232353356759">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-132.192859641589,106.667975935612"
+              Start="0,0"
+              End="-132.192859641589,99.1679759356116">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.2653285570612" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39.2653285570612"
+                    Point2="0,43.2653285570612"
+                    Point3="-4,43.2653285570612" />
+                  <mssgle:LineSegment
+                    End="-128.192859641589,43.2653285570612" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-128.192859641589,43.2653285570612"
+                    Point2="-132.192859641589,43.2653285570612"
+                    Point3="-132.192859641589,47.2653285570612" />
+                  <mssgle:LineSegment
+                    End="-132.192859641589,99.1679759356116" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 9]"
+          TopLeft="477.361912364538,71.232353356759">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-290.76587882192,111.998041292705"
+              Start="0,0"
+              End="-290.76587882192,104.498041292705">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.9349603455157" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.9349603455157"
+                    Point2="0,29.9349603455157"
+                    Point3="-4,29.9349603455157" />
+                  <mssgle:LineSegment
+                    End="-286.76587882192,29.9349603455157" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-286.76587882192,29.9349603455157"
+                    Point2="-290.76587882192,29.9349603455157"
+                    Point3="-290.76587882192,33.9349603455157" />
+                  <mssgle:LineSegment
+                    End="-290.76587882192,104.498041292705" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
-  <TaskHost
-    design-time-name="Package\Llenar Servicios">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\Llenar Servicios\OLE DB Source"
-          TopLeft="502,56" />
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Llenar Servicios\OLE DB Destination"
-          TopLeft="597,219" />
-        <EdgeLayout
-          Id="Package\Llenar Servicios.Paths[OLE DB Source Output]"
-          TopLeft="576.8,97.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="105.4,121.4"
-              Start="0,0"
-              End="105.4,113.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,56.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,56.7"
-                    Point2="0,60.7"
-                    Point3="4,60.7" />
-                  <mssgle:LineSegment
-                    End="101.4,60.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="101.4,60.7"
-                    Point2="105.4,60.7"
-                    Point3="105.4,64.7" />
-                  <mssgle:LineSegment
-                    End="105.4,113.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Lllenar Cliente">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\Lllenar Cliente\OLE DB Source"
-          TopLeft="565,62" />
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Lllenar Cliente\OLE DB Destination"
-          TopLeft="743,262" />
-        <EdgeLayout
-          Id="Package\Lllenar Cliente.Paths[OLE DB Source Output]"
-          TopLeft="639.8,103.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="188.4,158.4"
-              Start="0,0"
-              End="188.4,150.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,75.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,75.2"
-                    Point2="0,79.2"
-                    Point3="4,79.2" />
-                  <mssgle:LineSegment
-                    End="184.4,79.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="184.4,79.2"
-                    Point2="188.4,79.2"
-                    Point3="188.4,83.2" />
-                  <mssgle:LineSegment
-                    End="188.4,150.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\LLenar Trabajador">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\LLenar Trabajador\OLE DB Source"
-          TopLeft="374,81" />
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\LLenar Trabajador\OLE DB Destination"
-          TopLeft="601,234" />
-        <EdgeLayout
-          Id="Package\LLenar Trabajador.Paths[OLE DB Source Output]"
-          TopLeft="448.8,122.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="237.4,111.4"
-              Start="0,0"
-              End="237.4,103.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,51.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,51.7"
-                    Point2="0,55.7"
-                    Point3="4,55.7" />
-                  <mssgle:LineSegment
-                    End="233.4,55.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="233.4,55.7"
-                    Point2="237.4,55.7"
-                    Point3="237.4,59.7" />
-                  <mssgle:LineSegment
-                    End="237.4,103.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
   <TaskHost
     design-time-name="Package\LLenar Fecha">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\LLenar Fecha\OLE DB Source"
-          TopLeft="248.571432804575,20.6470591130966" />
-        <NodeLayout
           Size="170.4,41.6"
           Id="Package\LLenar Fecha\OLE DB Destination"
           TopLeft="415.000007067408,191.176473269413" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\LLenar Fecha\OLE DB Source"
+          TopLeft="248.571432804575,20.6470591130966" />
         <EdgeLayout
           Id="Package\LLenar Fecha.Paths[OLE DB Source Output]"
           TopLeft="323.371432804575,62.2470591130966">
@@ -2719,6 +2788,27 @@ from Cliente c</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\LLenar Fecha\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\LLenar Fecha\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Llenar Producto">
     <LayoutInfo>
@@ -2769,6 +2859,27 @@ from Cliente c</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Llenar Producto\OLE DB Destination 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Llenar Producto\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Llenar Resultados">
     <LayoutInfo>
@@ -2820,99 +2931,7 @@ from Cliente c</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Llenar Servicios\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Llenar Servicios\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Lllenar Cliente\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Lllenar Cliente\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\LLenar Trabajador\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\LLenar Trabajador\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\LLenar Fecha\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\LLenar Fecha\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Llenar Producto\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Llenar Producto\OLE DB Destination 1">
+    design-time-name="Package\Llenar Resultados\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2932,8 +2951,60 @@ from Cliente c</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Llenar Servicios">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Llenar Servicios\OLE DB Destination"
+          TopLeft="597,219" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\Llenar Servicios\OLE DB Source"
+          TopLeft="502,56" />
+        <EdgeLayout
+          Id="Package\Llenar Servicios.Paths[OLE DB Source Output]"
+          TopLeft="576.8,97.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="105.4,121.4"
+              Start="0,0"
+              End="105.4,113.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,56.7"
+                    Point2="0,60.7"
+                    Point3="4,60.7" />
+                  <mssgle:LineSegment
+                    End="101.4,60.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="101.4,60.7"
+                    Point2="105.4,60.7"
+                    Point3="105.4,64.7" />
+                  <mssgle:LineSegment
+                    End="105.4,113.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Llenar Resultados\OLE DB Destination">
+    design-time-name="Package\Llenar Servicios\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2942,6 +3013,160 @@ from Cliente c</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Llenar Servicios\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\LLenar Trabajador">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\LLenar Trabajador\OLE DB Destination"
+          TopLeft="601,234" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\LLenar Trabajador\OLE DB Source"
+          TopLeft="374,81" />
+        <EdgeLayout
+          Id="Package\LLenar Trabajador.Paths[OLE DB Source Output]"
+          TopLeft="448.8,122.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="237.4,111.4"
+              Start="0,0"
+              End="237.4,103.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,51.7"
+                    Point2="0,55.7"
+                    Point3="4,55.7" />
+                  <mssgle:LineSegment
+                    End="233.4,55.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="233.4,55.7"
+                    Point2="237.4,55.7"
+                    Point3="237.4,59.7" />
+                  <mssgle:LineSegment
+                    End="237.4,103.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\LLenar Trabajador\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\LLenar Trabajador\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Lllenar Cliente">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\Lllenar Cliente\OLE DB Source"
+          TopLeft="565,62" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Lllenar Cliente\OLE DB Destination"
+          TopLeft="743,262" />
+        <EdgeLayout
+          Id="Package\Lllenar Cliente.Paths[OLE DB Source Output]"
+          TopLeft="639.8,103.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="188.4,158.4"
+              Start="0,0"
+              End="188.4,150.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,75.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,75.2"
+                    Point2="0,79.2"
+                    Point3="4,79.2" />
+                  <mssgle:LineSegment
+                    End="184.4,79.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="184.4,79.2"
+                    Point2="188.4,79.2"
+                    Point3="188.4,83.2" />
+                  <mssgle:LineSegment
+                    End="188.4,150.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Lllenar Cliente\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Lllenar Cliente\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

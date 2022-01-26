@@ -1,0 +1,2645 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/16/2021 9:42:30 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-M19F1KH"
+  DTS:CreatorName="DESKTOP-M19F1KH\MSI"
+  DTS:DTSID="{5E1F539A-7300-4C0B-96F8-460505B99CF4}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="10250"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{3DBFCB6A-1CCA-498D-86A4-36124E94DC88}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-M19F1KH\ANDERSON.VideogameBD]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{EDA6CDEB-A0DD-4EBB-B379-D87806491365}"
+      DTS:ObjectName="DESKTOP-M19F1KH\ANDERSON.VideogameBD">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-M19F1KH\ANDERSON;Initial Catalog=VideogameBD;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-M19F1KH\ANDERSON.VideogameBD-DM]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{63336DD7-1422-45AD-968A-4336C123D18C}"
+      DTS:ObjectName="DESKTOP-M19F1KH\ANDERSON.VideogameBD-DM">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-M19F1KH\ANDERSON;Initial Catalog=VideogameBD-DM;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Fill LevelDim"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{0BB5A90C-8A6E-4723-88E3-CEBFD9586010}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Fill LevelDim"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Fill LevelDim\Destino de OLE DB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="Destino de OLE DB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[Level_DIM]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fill LevelDim\Destino de OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-M19F1KH\ANDERSON.VideogameBD-DM]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-M19F1KH\ANDERSON.VideogameBD-DM]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Fill LevelDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fill LevelDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[level_id]"
+                      cachedDataType="i4"
+                      cachedName="level_id"
+                      externalMetadataColumnId="Package\Fill LevelDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[level_id]"
+                      lineageId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[level_id]" />
+                    <inputColumn
+                      refId="Package\Fill LevelDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[levellabel_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="25"
+                      cachedName="levellabel_name"
+                      externalMetadataColumnId="Package\Fill LevelDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[levellabel_name]"
+                      lineageId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[levellabel_name]" />
+                    <inputColumn
+                      refId="Package\Fill LevelDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[levelgroup_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="levelgroup_name"
+                      externalMetadataColumnId="Package\Fill LevelDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[levelgroup_name]"
+                      lineageId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[levelgroup_name]" />
+                    <inputColumn
+                      refId="Package\Fill LevelDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[played_times]"
+                      cachedDataType="i4"
+                      cachedName="played_times"
+                      externalMetadataColumnId="Package\Fill LevelDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[played_times]"
+                      lineageId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[played_times]" />
+                    <inputColumn
+                      refId="Package\Fill LevelDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[duration_average_hour]"
+                      cachedDataType="i4"
+                      cachedName="duration_average_hour"
+                      externalMetadataColumnId="Package\Fill LevelDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[duration_average_hour]"
+                      lineageId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[duration_average_hour]" />
+                    <inputColumn
+                      refId="Package\Fill LevelDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[difficulty]"
+                      cachedDataType="numeric"
+                      cachedName="difficulty"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Fill LevelDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[difficulty]"
+                      lineageId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[difficulty]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fill LevelDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[leveldim_id]"
+                      dataType="i4"
+                      name="leveldim_id" />
+                    <externalMetadataColumn
+                      refId="Package\Fill LevelDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[level_id]"
+                      dataType="i4"
+                      name="level_id" />
+                    <externalMetadataColumn
+                      refId="Package\Fill LevelDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[levellabel_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="levellabel_name" />
+                    <externalMetadataColumn
+                      refId="Package\Fill LevelDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[levelgroup_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="levelgroup_name" />
+                    <externalMetadataColumn
+                      refId="Package\Fill LevelDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[played_times]"
+                      dataType="i4"
+                      name="played_times" />
+                    <externalMetadataColumn
+                      refId="Package\Fill LevelDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[duration_average_hour]"
+                      dataType="i4"
+                      name="duration_average_hour" />
+                    <externalMetadataColumn
+                      refId="Package\Fill LevelDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[difficulty]"
+                      dataType="numeric"
+                      name="difficulty"
+                      precision="10"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Fill LevelDim\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\Fill LevelDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fill LevelDim\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fill LevelDim\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fill LevelDim\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fill LevelDim\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fill LevelDim\Origen de OLE DB"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="Origen de OLE DB"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT        lv.level_id, lv.level_name AS levellabel_name, lvg.levelgroup_name, COUNT(lv.level_id) AS played_times, AVG(DATEDIFF([hour], lg.start_session_time, lg.end_session_time)) AS duration_average_hour, lv.difficulty
+FROM            [Log] AS lg INNER JOIN
+                         [Level] AS lv ON lv.level_id = lg.level_id INNER JOIN
+                         LevelGroup AS lvg ON lv.levelgroup_id = lvg.levelgroup_id
+GROUP BY lv.level_id, lv.level_name, lv.difficulty, lvg.levelgroup_name</property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fill LevelDim\Origen de OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-M19F1KH\ANDERSON.VideogameBD]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-M19F1KH\ANDERSON.VideogameBD]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[level_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[level_id]"
+                      lineageId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[level_id]"
+                      name="level_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[levellabel_name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[levellabel_name]"
+                      length="25"
+                      lineageId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[levellabel_name]"
+                      name="levellabel_name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[levelgroup_name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[levelgroup_name]"
+                      length="15"
+                      lineageId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[levelgroup_name]"
+                      name="levelgroup_name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[played_times]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[played_times]"
+                      lineageId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[played_times]"
+                      name="played_times"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[duration_average_hour]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[duration_average_hour]"
+                      lineageId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[duration_average_hour]"
+                      name="duration_average_hour"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[difficulty]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[difficulty]"
+                      lineageId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[difficulty]"
+                      name="difficulty"
+                      precision="10"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[level_id]"
+                      dataType="i4"
+                      name="level_id" />
+                    <externalMetadataColumn
+                      refId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[levellabel_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      name="levellabel_name" />
+                    <externalMetadataColumn
+                      refId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[levelgroup_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="levelgroup_name" />
+                    <externalMetadataColumn
+                      refId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[played_times]"
+                      dataType="i4"
+                      name="played_times" />
+                    <externalMetadataColumn
+                      refId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[duration_average_hour]"
+                      dataType="i4"
+                      name="duration_average_hour" />
+                    <externalMetadataColumn
+                      refId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[difficulty]"
+                      dataType="numeric"
+                      name="difficulty"
+                      precision="10"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[level_id]"
+                      dataType="i4"
+                      lineageId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[level_id]"
+                      name="level_id" />
+                    <outputColumn
+                      refId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[levellabel_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="25"
+                      lineageId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[levellabel_name]"
+                      name="levellabel_name" />
+                    <outputColumn
+                      refId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[levelgroup_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[levelgroup_name]"
+                      name="levelgroup_name" />
+                    <outputColumn
+                      refId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[played_times]"
+                      dataType="i4"
+                      lineageId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[played_times]"
+                      name="played_times" />
+                    <outputColumn
+                      refId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[duration_average_hour]"
+                      dataType="i4"
+                      lineageId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[duration_average_hour]"
+                      name="duration_average_hour" />
+                    <outputColumn
+                      refId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[difficulty]"
+                      dataType="numeric"
+                      lineageId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[difficulty]"
+                      name="difficulty"
+                      precision="10"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Fill LevelDim.Paths[Salida de origen de OLE DB]"
+              endId="Package\Fill LevelDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Fill LevelDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Fill PlayerDim"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{BA8407AC-3C0E-4303-A00A-A2564D017AC4}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Fill PlayerDim">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Fill PlayerDim\Destino de OLE DB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="Destino de OLE DB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[Player_DIM]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fill PlayerDim\Destino de OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-M19F1KH\ANDERSON.VideogameBD-DM]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-M19F1KH\ANDERSON.VideogameBD-DM]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Fill PlayerDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fill PlayerDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[player_id]"
+                      cachedDataType="i4"
+                      cachedName="player_id"
+                      externalMetadataColumnId="Package\Fill PlayerDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[player_id]"
+                      lineageId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[player_id]" />
+                    <inputColumn
+                      refId="Package\Fill PlayerDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[player_age]"
+                      cachedDataType="i4"
+                      cachedName="player_age"
+                      externalMetadataColumnId="Package\Fill PlayerDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[player_age]"
+                      lineageId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[player_age]" />
+                    <inputColumn
+                      refId="Package\Fill PlayerDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[player_gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="player_gender"
+                      externalMetadataColumnId="Package\Fill PlayerDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[player_gender]"
+                      lineageId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[player_gender]" />
+                    <inputColumn
+                      refId="Package\Fill PlayerDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[rated_stars]"
+                      cachedDataType="i4"
+                      cachedName="rated_stars"
+                      externalMetadataColumnId="Package\Fill PlayerDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[rated_stars]"
+                      lineageId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[rated_stars]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fill PlayerDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[playerdim_id]"
+                      dataType="i4"
+                      name="playerdim_id" />
+                    <externalMetadataColumn
+                      refId="Package\Fill PlayerDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[player_id]"
+                      dataType="i4"
+                      name="player_id" />
+                    <externalMetadataColumn
+                      refId="Package\Fill PlayerDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[player_age]"
+                      dataType="i4"
+                      name="player_age" />
+                    <externalMetadataColumn
+                      refId="Package\Fill PlayerDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[player_gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="player_gender" />
+                    <externalMetadataColumn
+                      refId="Package\Fill PlayerDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[rated_stars]"
+                      dataType="i4"
+                      name="rated_stars" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Fill PlayerDim\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\Fill PlayerDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fill PlayerDim\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fill PlayerDim\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fill PlayerDim\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fill PlayerDim\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fill PlayerDim\Origen de OLE DB"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="Origen de OLE DB"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT        player_id, age AS player_age, gender AS player_gender, rated_stars
+FROM            Player</property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fill PlayerDim\Origen de OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-M19F1KH\ANDERSON.VideogameBD]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-M19F1KH\ANDERSON.VideogameBD]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[player_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[player_id]"
+                      lineageId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[player_id]"
+                      name="player_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[player_age]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[player_age]"
+                      lineageId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[player_age]"
+                      name="player_age"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[player_gender]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[player_gender]"
+                      length="15"
+                      lineageId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[player_gender]"
+                      name="player_gender"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[rated_stars]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[rated_stars]"
+                      lineageId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[rated_stars]"
+                      name="rated_stars"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[player_id]"
+                      dataType="i4"
+                      name="player_id" />
+                    <externalMetadataColumn
+                      refId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[player_age]"
+                      dataType="i4"
+                      name="player_age" />
+                    <externalMetadataColumn
+                      refId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[player_gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="player_gender" />
+                    <externalMetadataColumn
+                      refId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[rated_stars]"
+                      dataType="i4"
+                      name="rated_stars" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[player_id]"
+                      dataType="i4"
+                      lineageId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[player_id]"
+                      name="player_id" />
+                    <outputColumn
+                      refId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[player_age]"
+                      dataType="i4"
+                      lineageId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[player_age]"
+                      name="player_age" />
+                    <outputColumn
+                      refId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[player_gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[player_gender]"
+                      name="player_gender" />
+                    <outputColumn
+                      refId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[rated_stars]"
+                      dataType="i4"
+                      lineageId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[rated_stars]"
+                      name="rated_stars" />
+                    <outputColumn
+                      refId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Fill PlayerDim.Paths[Salida de origen de OLE DB]"
+              endId="Package\Fill PlayerDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Fill PlayerDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Fill TimeDim"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{A20B479E-162F-4F88-881E-2E72017EDB37}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Fill TimeDim"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Fill TimeDim\Destino de OLE DB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="Destino de OLE DB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[Time_DIM]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fill TimeDim\Destino de OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-M19F1KH\ANDERSON.VideogameBD-DM]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-M19F1KH\ANDERSON.VideogameBD-DM]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Fill TimeDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fill TimeDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[datetime]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="datetime"
+                      externalMetadataColumnId="Package\Fill TimeDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[datetime]"
+                      lineageId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[datetime]" />
+                    <inputColumn
+                      refId="Package\Fill TimeDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[hour_time]"
+                      cachedDataType="i4"
+                      cachedName="hour_time"
+                      externalMetadataColumnId="Package\Fill TimeDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[hour_time]"
+                      lineageId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[hour_time]" />
+                    <inputColumn
+                      refId="Package\Fill TimeDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[day_time]"
+                      cachedDataType="i4"
+                      cachedName="day_time"
+                      externalMetadataColumnId="Package\Fill TimeDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[day_date]"
+                      lineageId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[day_time]" />
+                    <inputColumn
+                      refId="Package\Fill TimeDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[month_time]"
+                      cachedDataType="i4"
+                      cachedName="month_time"
+                      externalMetadataColumnId="Package\Fill TimeDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[month_int]"
+                      lineageId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[month_time]" />
+                    <inputColumn
+                      refId="Package\Fill TimeDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[year_time]"
+                      cachedDataType="i4"
+                      cachedName="year_time"
+                      externalMetadataColumnId="Package\Fill TimeDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[year_date]"
+                      lineageId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[year_time]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fill TimeDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[timedim_id]"
+                      dataType="i4"
+                      name="timedim_id" />
+                    <externalMetadataColumn
+                      refId="Package\Fill TimeDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[datetime]"
+                      dataType="dbTimeStamp"
+                      name="datetime" />
+                    <externalMetadataColumn
+                      refId="Package\Fill TimeDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[hour_time]"
+                      dataType="i4"
+                      name="hour_time" />
+                    <externalMetadataColumn
+                      refId="Package\Fill TimeDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[day_date]"
+                      dataType="i4"
+                      name="day_date" />
+                    <externalMetadataColumn
+                      refId="Package\Fill TimeDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[month_int]"
+                      dataType="i4"
+                      name="month_int" />
+                    <externalMetadataColumn
+                      refId="Package\Fill TimeDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[year_date]"
+                      dataType="i4"
+                      name="year_date" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Fill TimeDim\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\Fill TimeDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fill TimeDim\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fill TimeDim\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fill TimeDim\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fill TimeDim\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fill TimeDim\Origen de OLE DB"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="Origen de OLE DB"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select distinct lg.start_session_time as 'datetime',
+DATEPART(HOUR,lg.start_session_time) as hour_time,
+DAY(lg.start_session_time) as day_time,
+MONTH(lg.start_session_time) as month_time,
+YEAR(lg.start_session_time) as year_time
+from Log lg</property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fill TimeDim\Origen de OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-M19F1KH\ANDERSON.VideogameBD]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-M19F1KH\ANDERSON.VideogameBD]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[datetime]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[datetime]"
+                      lineageId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[datetime]"
+                      name="datetime"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[hour_time]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[hour_time]"
+                      lineageId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[hour_time]"
+                      name="hour_time"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[day_time]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[day_time]"
+                      lineageId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[day_time]"
+                      name="day_time"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[month_time]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[month_time]"
+                      lineageId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[month_time]"
+                      name="month_time"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[year_time]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[year_time]"
+                      lineageId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[year_time]"
+                      name="year_time"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[datetime]"
+                      dataType="dbTimeStamp"
+                      name="datetime" />
+                    <externalMetadataColumn
+                      refId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[hour_time]"
+                      dataType="i4"
+                      name="hour_time" />
+                    <externalMetadataColumn
+                      refId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[day_time]"
+                      dataType="i4"
+                      name="day_time" />
+                    <externalMetadataColumn
+                      refId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[month_time]"
+                      dataType="i4"
+                      name="month_time" />
+                    <externalMetadataColumn
+                      refId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[year_time]"
+                      dataType="i4"
+                      name="year_time" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[datetime]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[datetime]"
+                      name="datetime" />
+                    <outputColumn
+                      refId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[hour_time]"
+                      dataType="i4"
+                      lineageId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[hour_time]"
+                      name="hour_time" />
+                    <outputColumn
+                      refId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[day_time]"
+                      dataType="i4"
+                      lineageId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[day_time]"
+                      name="day_time" />
+                    <outputColumn
+                      refId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[month_time]"
+                      dataType="i4"
+                      lineageId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[month_time]"
+                      name="month_time" />
+                    <outputColumn
+                      refId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[year_time]"
+                      dataType="i4"
+                      lineageId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[year_time]"
+                      name="year_time" />
+                    <outputColumn
+                      refId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Fill TimeDim.Paths[Salida de origen de OLE DB]"
+              endId="Package\Fill TimeDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Fill TimeDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Fill UbicationDim"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{B6D342FD-162D-4817-9F20-66D71EBF3DCD}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Fill UbicationDim"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Fill UbicationDim\Destino de OLE DB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="Destino de OLE DB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[Ubication_DIM]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fill UbicationDim\Destino de OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-M19F1KH\ANDERSON.VideogameBD-DM]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-M19F1KH\ANDERSON.VideogameBD-DM]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Fill UbicationDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Fill UbicationDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[country_id]"
+                      cachedDataType="i4"
+                      cachedName="country_id"
+                      externalMetadataColumnId="Package\Fill UbicationDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[country_id]"
+                      lineageId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[country_id]" />
+                    <inputColumn
+                      refId="Package\Fill UbicationDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[country_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="country_name"
+                      externalMetadataColumnId="Package\Fill UbicationDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[country_name]"
+                      lineageId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[country_name]" />
+                    <inputColumn
+                      refId="Package\Fill UbicationDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[region_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="region_name"
+                      externalMetadataColumnId="Package\Fill UbicationDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[region_name]"
+                      lineageId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[region_name]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fill UbicationDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ubicationdim_id]"
+                      dataType="i4"
+                      name="ubicationdim_id" />
+                    <externalMetadataColumn
+                      refId="Package\Fill UbicationDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[country_id]"
+                      dataType="i4"
+                      name="country_id" />
+                    <externalMetadataColumn
+                      refId="Package\Fill UbicationDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[country_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="country_name" />
+                    <externalMetadataColumn
+                      refId="Package\Fill UbicationDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[region_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="region_name" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Fill UbicationDim\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\Fill UbicationDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fill UbicationDim\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fill UbicationDim\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fill UbicationDim\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fill UbicationDim\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Fill UbicationDim\Origen de OLE DB"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="Origen de OLE DB"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select distinct c.country_id, c.country_name, r.region_name from Country c
+inner join Region r on r.region_id = c.region_id</property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Fill UbicationDim\Origen de OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-M19F1KH\ANDERSON.VideogameBD]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-M19F1KH\ANDERSON.VideogameBD]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[country_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[country_id]"
+                      lineageId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[country_id]"
+                      name="country_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[country_name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[country_name]"
+                      length="15"
+                      lineageId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[country_name]"
+                      name="country_name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[region_name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[region_name]"
+                      length="15"
+                      lineageId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[region_name]"
+                      name="region_name"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[country_id]"
+                      dataType="i4"
+                      name="country_id" />
+                    <externalMetadataColumn
+                      refId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[country_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="country_name" />
+                    <externalMetadataColumn
+                      refId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[region_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="region_name" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[country_id]"
+                      dataType="i4"
+                      lineageId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[country_id]"
+                      name="country_id" />
+                    <outputColumn
+                      refId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[country_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[country_name]"
+                      name="country_name" />
+                    <outputColumn
+                      refId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[region_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[region_name]"
+                      name="region_name" />
+                    <outputColumn
+                      refId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Fill UbicationDim.Paths[Salida de origen de OLE DB]"
+              endId="Package\Fill UbicationDim\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Fill UbicationDim\Origen de OLE DB.Outputs[Salida de origen de OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{E6E1DD2A-065F-41F7-B24A-3174D4D4DFBC}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{63336DD7-1422-45AD-968A-4336C123D18C}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="DELETE FROM TSessions&#xA;DELETE FROM Level_DIM &#xA;DBCC CHECKIDENT(Level_DIM, RESEED, 0)&#xA;DELETE FROM Player_DIM &#xA;DBCC CHECKIDENT(Player_DIM, RESEED, 0)&#xA;DELETE FROM Time_DIM &#xA;DBCC CHECKIDENT(Time_DIM, RESEED, 0)&#xA;DELETE FROM Ubication_DIM &#xA;DBCC CHECKIDENT(Ubication_DIM, RESEED, 0)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Flujo de datos"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{17174276-7BD3-43A0-869F-CD78B34D1DDE}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Flujo de datos"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Tarea Flujo de datos\Destino de OLE DB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="Destino de OLE DB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[TSessions]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Destino de OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-M19F1KH\ANDERSON.VideogameBD-DM]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-M19F1KH\ANDERSON.VideogameBD-DM]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[playerdim_id]"
+                      cachedDataType="i4"
+                      cachedName="playerdim_id"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[playerdim_id]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[playerdim_id]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[leveldim_id]"
+                      cachedDataType="i4"
+                      cachedName="leveldim_id"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[leveldim_id]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[leveldim_id]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[timedim_id]"
+                      cachedDataType="i4"
+                      cachedName="timedim_id"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[timedim_id]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[timedim_id]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[ubicationdim_id]"
+                      cachedDataType="i4"
+                      cachedName="ubicationdim_id"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ubicationdim_id]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[ubicationdim_id]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[duration_minutes]"
+                      cachedDataType="i4"
+                      cachedName="duration_minutes"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[duration_minutes]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[duration_minutes]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[played_levels]"
+                      cachedDataType="i4"
+                      cachedName="played_levels"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[played_levels]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[played_levels]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[playerdim_id]"
+                      dataType="i4"
+                      name="playerdim_id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[leveldim_id]"
+                      dataType="i4"
+                      name="leveldim_id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[timedim_id]"
+                      dataType="i4"
+                      name="timedim_id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[ubicationdim_id]"
+                      dataType="i4"
+                      name="ubicationdim_id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[duration_minutes]"
+                      dataType="numeric"
+                      name="duration_minutes"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[played_levels]"
+                      dataType="i4"
+                      name="played_levels" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Origen de OLE DB"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="Origen de OLE DB"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select dp.playerdim_id, dl.leveldim_id,dt.timedim_id,du.ubicationdim_id,tlg.duration_minutes, COUNT(dl.level_id) as played_levels 
+from (select *,DATEDIFF(minute,start_session_time,end_session_time) as duration_minutes from Log) tlg
+INNER JOIN [VideogameBD-DM].dbo.Player_DIM dp ON tlg.player_id = dp.player_id
+INNER JOIN [VideogameBD-DM].dbo.Level_DIM dl ON tlg.level_id = dl.level_id
+INNER JOIN [VideogameBD-DM].dbo.Time_DIM dt ON tlg.start_session_time = dt.datetime
+INNER JOIN Player tp ON tp.player_id = dp.player_id
+INNER JOIN [VideogameBD-DM].dbo.Ubication_DIM du ON tp.country_id = du.country_id
+GROUP BY tlg.log_id,tlg.duration_minutes, dp.playerdim_id, dl.leveldim_id, dt.timedim_id, du.ubicationdim_id</property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Origen de OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-M19F1KH\ANDERSON.VideogameBD]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-M19F1KH\ANDERSON.VideogameBD]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[playerdim_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[playerdim_id]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[playerdim_id]"
+                      name="playerdim_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[leveldim_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[leveldim_id]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[leveldim_id]"
+                      name="leveldim_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[timedim_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[timedim_id]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[timedim_id]"
+                      name="timedim_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[ubicationdim_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[ubicationdim_id]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[ubicationdim_id]"
+                      name="ubicationdim_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[duration_minutes]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[duration_minutes]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[duration_minutes]"
+                      name="duration_minutes"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[played_levels]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[played_levels]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[played_levels]"
+                      name="played_levels"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[playerdim_id]"
+                      dataType="i4"
+                      name="playerdim_id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[leveldim_id]"
+                      dataType="i4"
+                      name="leveldim_id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[timedim_id]"
+                      dataType="i4"
+                      name="timedim_id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[ubicationdim_id]"
+                      dataType="i4"
+                      name="ubicationdim_id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[duration_minutes]"
+                      dataType="i4"
+                      name="duration_minutes" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[played_levels]"
+                      dataType="i4"
+                      name="played_levels" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[playerdim_id]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[playerdim_id]"
+                      name="playerdim_id" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[leveldim_id]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[leveldim_id]"
+                      name="leveldim_id" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[timedim_id]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[timedim_id]"
+                      name="timedim_id" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ubicationdim_id]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ubicationdim_id]"
+                      name="ubicationdim_id" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[duration_minutes]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[duration_minutes]"
+                      name="duration_minutes" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[played_levels]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[played_levels]"
+                      name="played_levels" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB]"
+              endId="Package\Tarea Flujo de datos\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{4F2337C9-C30C-4EBF-BF42-95DF17460D44}"
+      DTS:From="Package\Tarea Ejecutar SQL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\Fill PlayerDim" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{6433CE94-6AE1-4C42-8EB7-6240B326C637}"
+      DTS:From="Package\Tarea Ejecutar SQL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 1"
+      DTS:To="Package\Fill LevelDim" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{34EC3396-2121-4D09-804D-EF6FC47E042E}"
+      DTS:From="Package\Tarea Ejecutar SQL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 2"
+      DTS:To="Package\Fill TimeDim" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{EF603153-CC63-46CF-A98B-434F0B317F45}"
+      DTS:From="Package\Tarea Ejecutar SQL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 3"
+      DTS:To="Package\Fill UbicationDim" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{C4E0708D-7A4A-4863-B1FE-9EE27F2D4C4E}"
+      DTS:From="Package\Fill PlayerDim"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 4"
+      DTS:To="Package\Tarea Flujo de datos" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{E0B2F1A1-155B-441C-A476-A291A444B65D}"
+      DTS:From="Package\Fill LevelDim"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 5"
+      DTS:To="Package\Tarea Flujo de datos" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{AEBA1F8C-68CF-46E1-A1BC-7F319850A633}"
+      DTS:From="Package\Fill TimeDim"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 6"
+      DTS:To="Package\Tarea Flujo de datos" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 7]"
+      DTS:CreationName=""
+      DTS:DTSID="{FDA74F03-D367-4CD0-9FDA-EA9A33F84A5D}"
+      DTS:From="Package\Fill UbicationDim"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 7"
+      DTS:To="Package\Tarea Flujo de datos" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="138,42"
+          Id="Package\Fill LevelDim"
+          TopLeft="473,206" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\Fill PlayerDim"
+          TopLeft="214.5,204.5" />
+        <NodeLayout
+          Size="137,42"
+          Id="Package\Fill TimeDim"
+          TopLeft="693,212" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Fill UbicationDim"
+          TopLeft="934,220" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Tarea Ejecutar SQL"
+          TopLeft="559,31" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Tarea Flujo de datos"
+          TopLeft="558,425" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="603.5,73">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-317.5,131.5"
+              Start="0,0"
+              End="-317.5,124">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.1872586872587" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,41.1872586872587"
+                    Point2="0,45.1872586872587"
+                    Point3="-4,45.1872586872587" />
+                  <mssgle:LineSegment
+                    End="-313.5,45.1872586872587" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-313.5,45.1872586872587"
+                    Point2="-317.5,45.1872586872587"
+                    Point3="-317.5,49.1872586872587" />
+                  <mssgle:LineSegment
+                    End="-317.5,124" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 1]"
+          TopLeft="644,73">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-102,133"
+              Start="0,0"
+              End="-102,125.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,62.5"
+                    Point2="0,66.5"
+                    Point3="-4,66.5" />
+                  <mssgle:LineSegment
+                    End="-98,66.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-98,66.5"
+                    Point2="-102,66.5"
+                    Point3="-102,70.5" />
+                  <mssgle:LineSegment
+                    End="-102,125.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 2]"
+          TopLeft="684.5,73">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="77,139"
+              Start="0,0"
+              End="77,131.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.7644787644788" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,43.7644787644788"
+                    Point2="0,47.7644787644788"
+                    Point3="4,47.7644787644788" />
+                  <mssgle:LineSegment
+                    End="73,47.7644787644788" />
+                  <mssgle:CubicBezierSegment
+                    Point1="73,47.7644787644788"
+                    Point2="77,47.7644787644788"
+                    Point3="77,51.7644787644788" />
+                  <mssgle:LineSegment
+                    End="77,131.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 3]"
+          TopLeft="692.6,73">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="319.9,147"
+              Start="0,0"
+              End="319.9,139.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.0757825370675" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,40.0757825370675"
+                    Point2="0,44.0757825370675"
+                    Point3="4,44.0757825370675" />
+                  <mssgle:LineSegment
+                    End="315.9,44.0757825370675" />
+                  <mssgle:CubicBezierSegment
+                    Point1="315.9,44.0757825370675"
+                    Point2="319.9,44.0757825370675"
+                    Point3="319.9,48.0757825370675" />
+                  <mssgle:LineSegment
+                    End="319.9,139.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 4]"
+          TopLeft="286,246.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="309.6,178.5"
+              Start="0,0"
+              End="309.6,171">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,121.063694267516" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,121.063694267516"
+                    Point2="0,125.063694267516"
+                    Point3="4,125.063694267516" />
+                  <mssgle:LineSegment
+                    End="305.6,125.063694267516" />
+                  <mssgle:CubicBezierSegment
+                    Point1="305.6,125.063694267516"
+                    Point2="309.6,125.063694267516"
+                    Point3="309.6,129.063694267516" />
+                  <mssgle:LineSegment
+                    End="309.6,171" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 5]"
+          TopLeft="542,248">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="87.2,177"
+              Start="0,0"
+              End="87.2,169.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,93.8391959798995" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,93.8391959798995"
+                    Point2="0,97.8391959798995"
+                    Point3="4,97.8391959798995" />
+                  <mssgle:LineSegment
+                    End="83.2,97.8391959798995" />
+                  <mssgle:CubicBezierSegment
+                    Point1="83.2,97.8391959798995"
+                    Point2="87.2,97.8391959798995"
+                    Point3="87.2,101.839195979899" />
+                  <mssgle:LineSegment
+                    End="87.2,169.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 6]"
+          TopLeft="761.5,254">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-98.7,171"
+              Start="0,0"
+              End="-98.7,163.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,90.5226130653266" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,90.5226130653266"
+                    Point2="0,94.5226130653266"
+                    Point3="-4,94.5226130653266" />
+                  <mssgle:LineSegment
+                    End="-94.7,94.5226130653266" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-94.7,94.5226130653266"
+                    Point2="-98.7,94.5226130653266"
+                    Point3="-98.7,98.5226130653266" />
+                  <mssgle:LineSegment
+                    End="-98.7,163.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 7]"
+          TopLeft="1012.5,262">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-316.1,163"
+              Start="0,0"
+              End="-316.1,155.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,110.203821656051" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,110.203821656051"
+                    Point2="0,114.203821656051"
+                    Point3="-4,114.203821656051" />
+                  <mssgle:LineSegment
+                    End="-312.1,114.203821656051" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-312.1,114.203821656051"
+                    Point2="-316.1,114.203821656051"
+                    Point3="-316.1,118.203821656051" />
+                  <mssgle:LineSegment
+                    End="-316.1,155.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Fill LevelDim">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Fill LevelDim\Origen de OLE DB"
+          TopLeft="358,208" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Fill LevelDim\Destino de OLE DB"
+          TopLeft="452,461" />
+        <EdgeLayout
+          Id="Package\Fill LevelDim.Paths[Salida de origen de OLE DB]"
+          TopLeft="440,250">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="96,211"
+              Start="0,0"
+              End="96,203.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,101.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,101.5"
+                    Point2="0,105.5"
+                    Point3="4,105.5" />
+                  <mssgle:LineSegment
+                    End="92,105.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="92,105.5"
+                    Point2="96,105.5"
+                    Point3="96,109.5" />
+                  <mssgle:LineSegment
+                    End="96,203.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fill LevelDim\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fill LevelDim\Origen de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Fill PlayerDim">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Fill PlayerDim\Origen de OLE DB"
+          TopLeft="278,145" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Fill PlayerDim\Destino de OLE DB"
+          TopLeft="308,422" />
+        <EdgeLayout
+          Id="Package\Fill PlayerDim.Paths[Salida de origen de OLE DB]"
+          TopLeft="360,187">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="32,235"
+              Start="0,0"
+              End="32,227.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,113.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,113.5"
+                    Point2="0,117.5"
+                    Point3="4,117.5" />
+                  <mssgle:LineSegment
+                    End="28,117.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="28,117.5"
+                    Point2="32,117.5"
+                    Point3="32,121.5" />
+                  <mssgle:LineSegment
+                    End="32,227.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fill PlayerDim\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fill PlayerDim\Origen de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Fill TimeDim">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Fill TimeDim\Origen de OLE DB"
+          TopLeft="356,158" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Fill TimeDim\Destino de OLE DB"
+          TopLeft="748,371" />
+        <EdgeLayout
+          Id="Package\Fill TimeDim.Paths[Salida de origen de OLE DB]"
+          TopLeft="438,200">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="394,171"
+              Start="0,0"
+              End="394,163.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,81.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,81.5"
+                    Point2="0,85.5"
+                    Point3="4,85.5" />
+                  <mssgle:LineSegment
+                    End="390,85.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="390,85.5"
+                    Point2="394,85.5"
+                    Point3="394,89.5" />
+                  <mssgle:LineSegment
+                    End="394,163.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fill TimeDim\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fill TimeDim\Origen de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Fill UbicationDim">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Fill UbicationDim\Origen de OLE DB"
+          TopLeft="230,190" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Fill UbicationDim\Destino de OLE DB"
+          TopLeft="517,413" />
+        <EdgeLayout
+          Id="Package\Fill UbicationDim.Paths[Salida de origen de OLE DB]"
+          TopLeft="312,232">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="289,181"
+              Start="0,0"
+              End="289,173.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,86.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,86.5"
+                    Point2="0,90.5"
+                    Point3="4,90.5" />
+                  <mssgle:LineSegment
+                    End="285,90.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="285,90.5"
+                    Point2="289,90.5"
+                    Point3="289,94.5" />
+                  <mssgle:LineSegment
+                    End="289,173.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fill UbicationDim\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fill UbicationDim\Origen de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Tarea Flujo de datos">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Tarea Flujo de datos\Origen de OLE DB"
+          TopLeft="378,170" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Tarea Flujo de datos\Destino de OLE DB"
+          TopLeft="601,345" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB]"
+          TopLeft="460,212">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="225,133"
+              Start="0,0"
+              End="225,125.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,62.5"
+                    Point2="0,66.5"
+                    Point3="4,66.5" />
+                  <mssgle:LineSegment
+                    End="221,66.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="221,66.5"
+                    Point2="225,66.5"
+                    Point3="225,70.5" />
+                  <mssgle:LineSegment
+                    End="225,125.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Origen de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

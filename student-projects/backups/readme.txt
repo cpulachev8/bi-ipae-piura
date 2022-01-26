@@ -1,0 +1,1 @@
+Carpeta para subir los backups tanto de la base operacional y el datamart

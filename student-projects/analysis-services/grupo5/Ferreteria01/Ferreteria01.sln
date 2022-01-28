@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31605.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Ferreteria01", "Ferreteria01\Ferreteria01.dwproj", "{2AA6A1E6-3A09-4C0C-9361-A1CEBD9B6C0F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2AA6A1E6-3A09-4C0C-9361-A1CEBD9B6C0F}.Development|Default.ActiveCfg = Development
+		{2AA6A1E6-3A09-4C0C-9361-A1CEBD9B6C0F}.Development|Default.Build.0 = Development
+		{2AA6A1E6-3A09-4C0C-9361-A1CEBD9B6C0F}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6005654E-9854-404E-8CBC-07701E9EA3D0}
+	EndGlobalSection
+EndGlobal

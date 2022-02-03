@@ -1,0 +1,94 @@
+USE [DataMartHospedaje]
+GO
+/****** Object:  Table [dbo].[DIMCLIENTE]    Script Date: 01/02/2022 12:44:21 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[DIMCLIENTE](
+	[IdDimCliente] [int] IDENTITY(1,1) NOT NULL,
+	[IdCliente] [int] NOT NULL,
+	[Nombre] [varchar](50) NOT NULL,
+	[Apellidos] [varchar](50) NOT NULL,
+	[NumeroDoc] [varchar](50) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[IdDimCliente] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[DIMEMPLEADO]    Script Date: 01/02/2022 12:44:21 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[DIMEMPLEADO](
+	[IdDimEmpleado] [int] IDENTITY(1,1) NOT NULL,
+	[IdEmpleado] [int] NOT NULL,
+	[Nombre] [varchar](50) NOT NULL,
+	[Apellidos] [varchar](50) NOT NULL,
+	[Cargo] [varchar](50) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[IdDimEmpleado] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[DIMHABITACION]    Script Date: 01/02/2022 12:44:21 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[DIMHABITACION](
+	[IdDimHabitacion] [int] IDENTITY(1,1) NOT NULL,
+	[IdHabitacion] [int] NOT NULL,
+	[NumeroHabitacion] [int] NULL,
+	[Tipo] [varchar](50) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[IdDimHabitacion] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[DIMTIEMPO]    Script Date: 01/02/2022 12:44:21 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[DIMTIEMPO](
+	[IdDimTiempo] [int] IDENTITY(1,1) NOT NULL,
+	[Fecha] [date] NOT NULL,
+	[Dia] [int] NOT NULL,
+	[Mes] [varchar](25) NOT NULL,
+	[Año] [int] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[IdDimTiempo] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[HECHOS_HOTEL]    Script Date: 01/02/2022 12:44:21 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[HECHOS_HOTEL](
+	[IdDimEmpleado] [int] NOT NULL,
+	[IdDimCliente] [int] NOT NULL,
+	[IdDimHabitacion] [int] NOT NULL,
+	[IdDimTiempo] [int] NOT NULL,
+	[MontoPago] [int] NOT NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[HECHOS_HOTEL]  WITH CHECK ADD FOREIGN KEY([IdDimEmpleado])
+REFERENCES [dbo].[DIMEMPLEADO] ([IdDimEmpleado])
+GO
+ALTER TABLE [dbo].[HECHOS_HOTEL]  WITH CHECK ADD FOREIGN KEY([IdDimCliente])
+REFERENCES [dbo].[DIMCLIENTE] ([IdDimCliente])
+GO
+ALTER TABLE [dbo].[HECHOS_HOTEL]  WITH CHECK ADD FOREIGN KEY([IdDimHabitacion])
+REFERENCES [dbo].[DIMHABITACION] ([IdDimHabitacion])
+GO
+ALTER TABLE [dbo].[HECHOS_HOTEL]  WITH CHECK ADD FOREIGN KEY([IdDimTiempo])
+REFERENCES [dbo].[DIMTIEMPO] ([IdDimTiempo])
+GO

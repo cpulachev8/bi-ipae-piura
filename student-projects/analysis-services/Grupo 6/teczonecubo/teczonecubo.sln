@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "teczonecubo", "teczone01\teczonecubo.dwproj", "{539E4187-383A-4BAB-A1AC-C8C7EF54AD23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{539E4187-383A-4BAB-A1AC-C8C7EF54AD23}.Development|Default.ActiveCfg = Development
+		{539E4187-383A-4BAB-A1AC-C8C7EF54AD23}.Development|Default.Build.0 = Development
+		{539E4187-383A-4BAB-A1AC-C8C7EF54AD23}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2CFABC12-3423-4F8D-BC5D-B8F6482BFCEE}
+	EndGlobalSection
+EndGlobal

@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{FA4523FC-87A1-487E-A7D0-38B75300FEA8}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{F2B3A2DE-81CC-40E9-87E1-F17F6C875257}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAb15D/eCVQkWq9S4ba5FFBAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACO4EURnchZnAyrd7MMPDJw+2KEyQycMlbMCO1wfA/SwwAAAAAOgAAAAAIAACAAAAA4/AYNRmuU8dhqEDTudjomwn4OSKbBWwbr/SSUODEP6hAAAACLs2cB6RPvIUnfkPTlRD83QAAAAFPVd9pITTwPM3/JvgO728k7lZprYuMuhxFTWDY3kzkkvI/rMt6oAVNB/FBNLyQQSMJBet800FxHcnuwt4YeEQw</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAb15D/eCVQkWq9S4ba5FFBAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACSeG+7rNZKTtLhfwhbOEZRHlnVUMvR7Cxc8zYD2SzgcgAAAAAOgAAAAAIAACAAAAChNs99Lj6XTXobowPJTL9m3RySXAvNh5IRBE9bEf5QjxAAAACD5l7cLwULP8ShAbYmOSbWQAAAAPmZIZk1uzWd3+rr8jE7FYE1skY06ZbxCzXf+L74OHqXSza/mySSVDEbNErQiPqjx95wPEMDESHsNGdnxZn+eYc</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAb15D/eCVQkWq9S4ba5FFBAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA5uvhfIJhj4v4orsrE2PiHARVEvxW09AwM415XgG4aDQAAAAAOgAAAAAIAACAAAACVsJVLy3nhq30AiaXKrqPazBNpngJjud1LLcpnph1/kRAAAABiCoqPf3tkW1cgUIiO94tjQAAAAGwFBKJOAxLe7DFCF2BFTXtwBNA1JNAVNjUjRudJzuvtLcDAGM2/q0R4lAqRAVCkdp5KQph46mXYkXb1TNilxME</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAb15D/eCVQkWq9S4ba5FFBAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADqBXc8bXAsxUOPklLdepEDXB720Xy9ePQ4gu88b7euBwAAAAAOgAAAAAIAACAAAADevx4GInQZhiQHhr6dE7FjLpf4F/ZM3Zn8YMnwsqNeWhAAAAD++AZGAnM0oVbiaxZRzFTQQAAAAFZAi3lURyKSOrkMRBVFdhHbtctdDOgxVF7nfP9fXph/J6GLVaQUdIcYiK/Py9kkcUp9Pj48clQuWKhBYXpkQnA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -804,23 +804,11 @@ from Productos p</property>
                       externalMetadataColumnId="Package\Llenar Resultados\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cantidad]"
                       lineageId="Package\Llenar Resultados\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cantidad]" />
                     <inputColumn
-                      refId="Package\Llenar Resultados\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Id_Dm_Trab]"
+                      refId="Package\Llenar Resultados\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Id_Dm_Fecha]"
                       cachedDataType="i4"
-                      cachedName="Id_Dm_Trab"
-                      externalMetadataColumnId="Package\Llenar Resultados\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id_Trab]"
-                      lineageId="Package\Llenar Resultados\OLE DB Source.Outputs[OLE DB Source Output].Columns[Id_Dm_Trab]" />
-                    <inputColumn
-                      refId="Package\Llenar Resultados\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Id_Dm_Prod]"
-                      cachedDataType="i4"
-                      cachedName="Id_Dm_Prod"
-                      externalMetadataColumnId="Package\Llenar Resultados\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id_Prod]"
-                      lineageId="Package\Llenar Resultados\OLE DB Source.Outputs[OLE DB Source Output].Columns[Id_Dm_Prod]" />
-                    <inputColumn
-                      refId="Package\Llenar Resultados\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Id_Dim_Cliente]"
-                      cachedDataType="i4"
-                      cachedName="Id_Dim_Cliente"
-                      externalMetadataColumnId="Package\Llenar Resultados\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id_clie]"
-                      lineageId="Package\Llenar Resultados\OLE DB Source.Outputs[OLE DB Source Output].Columns[Id_Dim_Cliente]" />
+                      cachedName="Id_Dm_Fecha"
+                      externalMetadataColumnId="Package\Llenar Resultados\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id_Fec]"
+                      lineageId="Package\Llenar Resultados\OLE DB Source.Outputs[OLE DB Source Output].Columns[Id_Dm_Fecha]" />
                     <inputColumn
                       refId="Package\Llenar Resultados\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Id_Dm_Serv]"
                       cachedDataType="i4"
@@ -828,11 +816,23 @@ from Productos p</property>
                       externalMetadataColumnId="Package\Llenar Resultados\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id_serv]"
                       lineageId="Package\Llenar Resultados\OLE DB Source.Outputs[OLE DB Source Output].Columns[Id_Dm_Serv]" />
                     <inputColumn
-                      refId="Package\Llenar Resultados\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Id_Dm_Fecha]"
+                      refId="Package\Llenar Resultados\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Id_Dim_Cliente]"
                       cachedDataType="i4"
-                      cachedName="Id_Dm_Fecha"
-                      externalMetadataColumnId="Package\Llenar Resultados\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id_Fec]"
-                      lineageId="Package\Llenar Resultados\OLE DB Source.Outputs[OLE DB Source Output].Columns[Id_Dm_Fecha]" />
+                      cachedName="Id_Dim_Cliente"
+                      externalMetadataColumnId="Package\Llenar Resultados\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id_clie]"
+                      lineageId="Package\Llenar Resultados\OLE DB Source.Outputs[OLE DB Source Output].Columns[Id_Dim_Cliente]" />
+                    <inputColumn
+                      refId="Package\Llenar Resultados\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Id_Dm_Prod]"
+                      cachedDataType="i4"
+                      cachedName="Id_Dm_Prod"
+                      externalMetadataColumnId="Package\Llenar Resultados\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id_Prod]"
+                      lineageId="Package\Llenar Resultados\OLE DB Source.Outputs[OLE DB Source Output].Columns[Id_Dm_Prod]" />
+                    <inputColumn
+                      refId="Package\Llenar Resultados\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Id_Dm_Trab]"
+                      cachedDataType="i4"
+                      cachedName="Id_Dm_Trab"
+                      externalMetadataColumnId="Package\Llenar Resultados\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id_Trab]"
+                      lineageId="Package\Llenar Resultados\OLE DB Source.Outputs[OLE DB Source Output].Columns[Id_Dm_Trab]" />
                     <inputColumn
                       refId="Package\Llenar Resultados\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[precio]"
                       cachedDataType="numeric"
@@ -927,8 +927,7 @@ from Productos p</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">---llenar tabla de hechos , tabla de resultados
-select dc.id_detalle, dmc.Id_Dim_Cliente,ISNULL(dms.Id_Dm_Serv,2) as Id_Dm_Serv , ISNULL(dmp.Id_Dm_Productos ,22) as Id_Dm_Prod , dmt.Id_Dm_Trab ,dmf.Id_Dm_Fecha,SUM(dc.cantidad) as Cantidad,ROUND(SUM((dc.subtotal  * dc.cantidad) + dc.igv),2) as precio
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select dc.id_detalle, dmc.Id_Dim_Cliente,ISNULL(dms.Id_Dm_Serv,27) as Id_Dm_Serv , ISNULL(dmp.Id_Dm_Productos ,22) as Id_Dm_Prod , dmt.Id_Dm_Trab ,dmf.Id_Dm_Fecha,SUM(dc.cantidad) as Cantidad,ROUND(SUM((dc.subtotal  * dc.cantidad) + dc.igv),2) as precio
  from  Detalle_comprobante as dc
  left join Comprobante c ON dc.id_detalle= c.id_detalle
 left join DMSpa.dbo.Dm_Servicios dms ON dc.Id_servicio = dms.Id_servicio
@@ -1214,7 +1213,7 @@ order by dc.id_detalle</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -2422,30 +2421,30 @@ from Cliente c</property>
           TopLeft="446.428579031205,29.632353356759" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
-          TopLeft="186.596033542619,224.830394649464">
+          TopLeft="186.596033542619,224.830394649465">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="297.468259911148,126.403270407175"
+              EndConnector="297.468259911148,126.403270407174"
               Start="0,0"
-              End="297.468259911148,118.903270407175">
+              End="297.468259911148,118.903270407174">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,88.5125384864107" />
+                    End="0,88.51253848641" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,88.5125384864107"
-                    Point2="0,92.5125384864107"
-                    Point3="4,92.5125384864107" />
+                    Point1="0,88.51253848641"
+                    Point2="0,92.51253848641"
+                    Point3="4,92.51253848641" />
                   <mssgle:LineSegment
-                    End="293.468259911148,92.5125384864107" />
+                    End="293.468259911148,92.51253848641" />
                   <mssgle:CubicBezierSegment
-                    Point1="293.468259911148,92.5125384864107"
-                    Point2="297.468259911148,92.5125384864107"
-                    Point3="297.468259911148,96.5125384864107" />
+                    Point1="293.468259911148,92.51253848641"
+                    Point2="297.468259911148,92.51253848641"
+                    Point3="297.468259911148,96.51253848641" />
                   <mssgle:LineSegment
-                    End="297.468259911148,118.903270407175" />
+                    End="297.468259911148,118.903270407174" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2456,30 +2455,30 @@ from Cliente c</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 1]"
-          TopLeft="883.638902642898,221.199675721432">
+          TopLeft="883.638902642898,221.199675721433">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-297.174609189131,130.033989335207"
+              EndConnector="-297.174609189131,130.033989335206"
               Start="0,0"
-              End="-297.174609189131,122.533989335207">
+              End="-297.174609189131,122.533989335206">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,91.1698037888109" />
+                    End="0,91.1698037888106" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,91.1698037888109"
-                    Point2="0,95.1698037888109"
-                    Point3="-4,95.1698037888109" />
+                    Point1="0,91.1698037888106"
+                    Point2="0,95.1698037888106"
+                    Point3="-4,95.1698037888106" />
                   <mssgle:LineSegment
-                    End="-293.174609189131,95.1698037888109" />
+                    End="-293.174609189131,95.1698037888106" />
                   <mssgle:CubicBezierSegment
-                    Point1="-293.174609189131,95.1698037888109"
-                    Point2="-297.174609189131,95.1698037888109"
-                    Point3="-297.174609189131,99.1698037888109" />
+                    Point1="-293.174609189131,95.1698037888106"
+                    Point2="-297.174609189131,95.1698037888106"
+                    Point3="-297.174609189131,99.1698037888106" />
                   <mssgle:LineSegment
-                    End="-297.174609189131,122.533989335207" />
+                    End="-297.174609189131,122.533989335206" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2501,17 +2500,17 @@ from Cliente c</property>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,73.2554877815054" />
+                    End="0,73.2554877815051" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,73.2554877815054"
-                    Point2="0,77.2554877815054"
-                    Point3="-4,77.2554877815054" />
+                    Point1="0,73.2554877815051"
+                    Point2="0,77.2554877815051"
+                    Point3="-4,77.2554877815051" />
                   <mssgle:LineSegment
-                    End="-141.746034841148,77.2554877815054" />
+                    End="-141.746034841148,77.2554877815051" />
                   <mssgle:CubicBezierSegment
-                    Point1="-141.746034841148,77.2554877815054"
-                    Point2="-145.746034841148,77.2554877815054"
-                    Point3="-145.746034841148,81.2554877815054" />
+                    Point1="-141.746034841148,77.2554877815051"
+                    Point2="-145.746034841148,77.2554877815051"
+                    Point3="-145.746034841148,81.2554877815051" />
                   <mssgle:LineSegment
                     End="-145.746034841148,122.533989335207" />
                 </mssgle:SegmentCollection>
@@ -2557,17 +2556,17 @@ from Cliente c</property>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,74.2650994834769" />
+                    End="0,74.2650994834768" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,74.2650994834769"
-                    Point2="0,78.2650994834769"
-                    Point3="4,78.2650994834769" />
+                    Point1="0,74.2650994834768"
+                    Point2="0,78.2650994834768"
+                    Point3="4,78.2650994834768" />
                   <mssgle:LineSegment
-                    End="133.561907397484,78.2650994834769" />
+                    End="133.561907397484,78.2650994834768" />
                   <mssgle:CubicBezierSegment
-                    Point1="133.561907397484,78.2650994834769"
-                    Point2="137.561907397484,78.2650994834769"
-                    Point3="137.561907397484,82.2650994834769" />
+                    Point1="133.561907397484,78.2650994834768"
+                    Point2="137.561907397484,78.2650994834768"
+                    Point3="137.561907397484,82.2650994834768" />
                   <mssgle:LineSegment
                     End="137.561907397484,124.233335764268" />
                 </mssgle:SegmentCollection>
@@ -2747,37 +2746,37 @@ from Cliente c</property>
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\LLenar Fecha\OLE DB Destination"
-          TopLeft="36.1666737340746,202.009806602746" />
+          TopLeft="415.000007067408,191.176473269413" />
         <NodeLayout
           Size="149.6,41.6"
           Id="Package\LLenar Fecha\OLE DB Source"
-          TopLeft="9.73809947124171,52.4803924464299" />
+          TopLeft="248.571432804575,20.6470591130966" />
         <EdgeLayout
           Id="Package\LLenar Fecha.Paths[OLE DB Source Output]"
-          TopLeft="84.5380994712417,94.0803924464299">
+          TopLeft="323.371432804575,62.2470591130966">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="36.8285742628329,107.929414156316"
+              EndConnector="176.828574262833,128.929414156316"
               Start="0,0"
-              End="36.8285742628329,100.429414156316">
+              End="176.828574262833,121.429414156316">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,49.9647070781582" />
+                    End="0,60.4647070781582" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,49.9647070781582"
-                    Point2="0,53.9647070781582"
-                    Point3="4,53.9647070781582" />
+                    Point1="0,60.4647070781582"
+                    Point2="0,64.4647070781582"
+                    Point3="4,64.4647070781582" />
                   <mssgle:LineSegment
-                    End="32.8285742628329,53.9647070781582" />
+                    End="172.828574262833,64.4647070781582" />
                   <mssgle:CubicBezierSegment
-                    Point1="32.8285742628329,53.9647070781582"
-                    Point2="36.8285742628329,53.9647070781582"
-                    Point3="36.8285742628329,57.9647070781582" />
+                    Point1="172.828574262833,64.4647070781582"
+                    Point2="176.828574262833,64.4647070781582"
+                    Point3="176.828574262833,68.4647070781582" />
                   <mssgle:LineSegment
-                    End="36.8285742628329,100.429414156316" />
+                    End="176.828574262833,121.429414156316" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2818,37 +2817,37 @@ from Cliente c</property>
         <NodeLayout
           Size="149.6,41.6"
           Id="Package\Llenar Producto\OLE DB Source"
-          TopLeft="34,44" />
+          TopLeft="264,21" />
         <NodeLayout
           Size="179.2,41.6"
           Id="Package\Llenar Producto\OLE DB Destination 1"
-          TopLeft="42,190" />
+          TopLeft="465,207" />
         <EdgeLayout
           Id="Package\Llenar Producto.Paths[OLE DB Source Output]"
-          TopLeft="108.8,85.6">
+          TopLeft="338.8,62.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="22.8,104.4"
+              EndConnector="215.8,144.4"
               Start="0,0"
-              End="22.8,96.9">
+              End="215.8,136.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,48.2" />
+                    End="0,68.2" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,48.2"
-                    Point2="0,52.2"
-                    Point3="4,52.2" />
+                    Point1="0,68.2"
+                    Point2="0,72.2"
+                    Point3="4,72.2" />
                   <mssgle:LineSegment
-                    End="18.8,52.2" />
+                    End="211.8,72.2" />
                   <mssgle:CubicBezierSegment
-                    Point1="18.8,52.2"
-                    Point2="22.8,52.2"
-                    Point3="22.8,56.2" />
+                    Point1="211.8,72.2"
+                    Point2="215.8,72.2"
+                    Point3="215.8,76.2" />
                   <mssgle:LineSegment
-                    End="22.8,96.9" />
+                    End="215.8,136.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2889,37 +2888,37 @@ from Cliente c</property>
         <NodeLayout
           Size="149.6,41.6"
           Id="Package\Llenar Resultados\OLE DB Source"
-          TopLeft="20,54" />
+          TopLeft="441,80" />
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\Llenar Resultados\OLE DB Destination"
-          TopLeft="66.857151165301,224.82353292947" />
+          TopLeft="548,252" />
         <EdgeLayout
           Id="Package\Llenar Resultados.Paths[OLE DB Source Output]"
-          TopLeft="94.8,95.6">
+          TopLeft="515.8,121.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="57.2571511653008,129.22353292947"
+              EndConnector="117.4,130.4"
               Start="0,0"
-              End="57.2571511653008,121.72353292947">
+              End="117.4,122.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,60.611766464735" />
+                    End="0,61.2" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,60.611766464735"
-                    Point2="0,64.611766464735"
-                    Point3="4,64.611766464735" />
+                    Point1="0,61.2"
+                    Point2="0,65.2"
+                    Point3="4,65.2" />
                   <mssgle:LineSegment
-                    End="53.2571511653008,64.611766464735" />
+                    End="113.4,65.2" />
                   <mssgle:CubicBezierSegment
-                    Point1="53.2571511653008,64.611766464735"
-                    Point2="57.2571511653008,64.611766464735"
-                    Point3="57.2571511653008,68.611766464735" />
+                    Point1="113.4,65.2"
+                    Point2="117.4,65.2"
+                    Point3="117.4,69.2" />
                   <mssgle:LineSegment
-                    End="57.2571511653008,121.72353292947" />
+                    End="117.4,122.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2956,18 +2955,18 @@ from Cliente c</property>
     design-time-name="Package\Llenar Servicios">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\Llenar Servicios\OLE DB Destination"
-          TopLeft="121.999991910798,208.294117496913" />
+          TopLeft="597,219" />
         <NodeLayout
           Size="149.6,41.6"
           Id="Package\Llenar Servicios\OLE DB Source"
-          TopLeft="26.999991910798,45.2941174969129" />
+          TopLeft="502,56" />
         <EdgeLayout
           Id="Package\Llenar Servicios.Paths[OLE DB Source Output]"
-          TopLeft="101.799991910798,86.8941174969129">
+          TopLeft="576.8,97.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2996,7 +2995,9 @@ from Cliente c</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3027,47 +3028,49 @@ from Cliente c</property>
     design-time-name="Package\LLenar Trabajador">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\LLenar Trabajador\OLE DB Destination"
-          TopLeft="28.3333333333333,177" />
+          TopLeft="601,234" />
         <NodeLayout
           Size="149.6,41.6"
           Id="Package\LLenar Trabajador\OLE DB Source"
-          TopLeft="24.6666666666667,52" />
+          TopLeft="374,81" />
         <EdgeLayout
           Id="Package\LLenar Trabajador.Paths[OLE DB Source Output]"
-          TopLeft="99.4666666666667,93.6">
+          TopLeft="448.8,122.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="14.0666666666667,83.4000000000001"
+              EndConnector="237.4,111.4"
               Start="0,0"
-              End="14.0666666666667,75.9000000000001">
+              End="237.4,103.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.7" />
+                    End="0,51.7" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,37.7"
-                    Point2="0,41.7"
-                    Point3="4,41.7" />
+                    Point1="0,51.7"
+                    Point2="0,55.7"
+                    Point3="4,55.7" />
                   <mssgle:LineSegment
-                    End="10.0666666666667,41.7" />
+                    End="233.4,55.7" />
                   <mssgle:CubicBezierSegment
-                    Point1="10.0666666666667,41.7"
-                    Point2="14.0666666666667,41.7"
-                    Point3="14.0666666666667,45.7" />
+                    Point1="233.4,55.7"
+                    Point2="237.4,55.7"
+                    Point3="237.4,59.7" />
                   <mssgle:LineSegment
-                    End="14.0666666666667,75.9000000000001" />
+                    End="237.4,103.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3098,47 +3101,49 @@ from Cliente c</property>
     design-time-name="Package\Lllenar Cliente">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="149.6,41.6"
           Id="Package\Lllenar Cliente\OLE DB Source"
-          TopLeft="36,59" />
+          TopLeft="565,62" />
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\Lllenar Cliente\OLE DB Destination"
-          TopLeft="78,226" />
+          TopLeft="743,262" />
         <EdgeLayout
           Id="Package\Lllenar Cliente.Paths[OLE DB Source Output]"
-          TopLeft="110.8,100.6">
+          TopLeft="639.8,103.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="52.4,125.4"
+              EndConnector="188.4,158.4"
               Start="0,0"
-              End="52.4,117.9">
+              End="188.4,150.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,58.7" />
+                    End="0,75.2" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,58.7"
-                    Point2="0,62.7"
-                    Point3="4,62.7" />
+                    Point1="0,75.2"
+                    Point2="0,79.2"
+                    Point3="4,79.2" />
                   <mssgle:LineSegment
-                    End="48.4,62.7" />
+                    End="184.4,79.2" />
                   <mssgle:CubicBezierSegment
-                    Point1="48.4,62.7"
-                    Point2="52.4,62.7"
-                    Point3="52.4,66.7" />
+                    Point1="184.4,79.2"
+                    Point2="188.4,79.2"
+                    Point3="188.4,83.2" />
                   <mssgle:LineSegment
-                    End="52.4,117.9" />
+                    End="188.4,150.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

@@ -1,1 +1,0 @@
-Cada grupo en esta carpeta deberá subir su proyecto que construye su proceso ETL

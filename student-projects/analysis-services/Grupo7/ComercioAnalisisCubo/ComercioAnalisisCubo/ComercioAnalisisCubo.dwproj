@@ -56,14 +56,14 @@
           <ConfigurationSetting>
             <Id>Comercio DM</Id>
             <Name>Comercio DM</Name>
-            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=DESKTOP-UPJK55O;Integrated Security=SSPI;Initial Catalog=ComercioDM</Value>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=DESKTOP-UPJK55O;Persist Security Info=True;Password=;User ID=;Initial Catalog=ComercioDM</Value>
           </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>
           <ConfigurationSetting>
             <Id>Comercio DM</Id>
             <Name>Comercio DM</Name>
-            <Value xsi:type="xsd:int">0</Value>
+            <Value xsi:type="xsd:int">1</Value>
           </ConfigurationSetting>
         </ConnectionSecurityMappings>
       </Options>

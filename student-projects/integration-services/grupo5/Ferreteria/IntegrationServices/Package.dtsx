@@ -7,27 +7,15 @@
   DTS:CreatorName="DESKTOP-LLSF3EV\LENOVO"
   DTS:DTSID="{08D5910B-B9C4-456F-B225-F838AE92FC77}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.167"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="10250"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="119"
-  DTS:VersionGUID="{5E6E6977-5C23-4E08-BFA2-DDAFAFA44235}">
+  DTS:VersionBuild="121"
+  DTS:VersionGUID="{A040CE22-7D05-4184-B56B-95BA9BFD35AE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-LLSF3EV.DimFerreteria]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{DDB06DF8-8D1B-472C-A271-C9254E3FD1B1}"
-      DTS:ObjectName="DESKTOP-LLSF3EV.DimFerreteria">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-LLSF3EV;Initial Catalog=DimFerreteria;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DESKTOP-LLSF3EV.DimFerreteria 1]"
       DTS:CreationName="OLEDB"
@@ -37,91 +25,12 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-LLSF3EV;Initial Catalog=DimFerreteria;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-LLSF3EV.DimFerreteria 2]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{A1BC455E-3B0B-4391-AD52-858DD5321064}"
-      DTS:ObjectName="DESKTOP-LLSF3EV.DimFerreteria 2">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-LLSF3EV;Initial Catalog=DimFerreteria;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-LLSF3EV.DimFerreteria 3]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{0F7F4F01-AAC3-4058-A2BD-83E17B95B89E}"
-      DTS:ObjectName="DESKTOP-LLSF3EV.DimFerreteria 3">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-LLSF3EV;Initial Catalog=DimFerreteria;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-LLSF3EV.DimFerreteria 4]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{B1E9BB72-0870-45C1-9FB6-6939513C7150}"
-      DTS:ObjectName="DESKTOP-LLSF3EV.DimFerreteria 4">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-LLSF3EV;Initial Catalog=DimFerreteria;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-LLSF3EV.Dim_Ferreteria]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{4628DE00-049B-4AC1-8B20-0745F9605F5A}"
-      DTS:ObjectName="DESKTOP-LLSF3EV.Dim_Ferreteria">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-LLSF3EV;Initial Catalog=Dim_Ferreteria;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-LLSF3EV.Dim_Ferreteria 1]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{6085377E-7131-4C8E-B04F-1570D9B91CFB}"
-      DTS:ObjectName="DESKTOP-LLSF3EV.Dim_Ferreteria 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-LLSF3EV;Initial Catalog=Dim_Ferreteria;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-LLSF3EV.Ferreteria]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{96E84B4F-E042-4C30-AD66-78005DD22728}"
-      DTS:ObjectName="DESKTOP-LLSF3EV.Ferreteria">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-LLSF3EV;Initial Catalog=Ferreteria;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-LLSF3EV.Ferreteria 1]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{D0180220-2052-474F-B51C-C831D758DF86}"
-      DTS:ObjectName="DESKTOP-LLSF3EV.Ferreteria 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-LLSF3EV;Initial Catalog=Ferreteria;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-DNRC51T;User ID=sa;Initial Catalog=DimFerreteria;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQr1XXq7A80q3Xm3oWsC7zQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABgkVS2hVGBLBAvDzAvp3m2bKygHU4ugF7Mt5/bF3nBhQAAAAAOgAAAAAIAACAAAAAV1TH4G2+kX4c7h5bvi454V81S8R5ViNIFMoS5vdp/whAAAADQPYoRQ007n1dRDJ+p6NtQQAAAAOTqXKB8w8X0SWqxfmWWCtgk5m+rVtigVFotPf5B0jRCAAgRE9M/zTbpkHEVC3pIbYSV7jXbMN3zq1nzi/MnkBU</DTS:Password>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -133,73 +42,12 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-LLSF3EV;Initial Catalog=Ferreterias;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-LLSF3EV\SQLEXPRESS.DimFerreterias01]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{A8AC787E-81B5-4909-9275-690988DA5B2E}"
-      DTS:ObjectName="DESKTOP-LLSF3EV\SQLEXPRESS.DimFerreterias01">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-LLSF3EV\SQLEXPRESS;Initial Catalog=DimFerreterias01;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-LLSF3EV\SQLEXPRESS.DimFerreterias011]"
-      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-      DTS:DTSID="{6D716D5D-B758-4F41-98DA-685273BE7789}"
-      DTS:ObjectName="DESKTOP-LLSF3EV\SQLEXPRESS.DimFerreterias011">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=DESKTOP-LLSF3EV\SQLEXPRESS;Initial Catalog=DimFerreterias01;Integrated Security=True;Application Name=SSIS-Package-{6D716D5D-B758-4F41-98DA-685273BE7789}DESKTOP-LLSF3EV\SQLEXPRESS.DimFerreterias011;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-LLSF3EV\SQLEXPRESS.FerreteriaJair]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{E98AAA38-DD3B-446A-8EAB-7DD34C85A6AF}"
-      DTS:ObjectName="DESKTOP-LLSF3EV\SQLEXPRESS.FerreteriaJair">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-LLSF3EV\SQLEXPRESS;Initial Catalog=FerreteriaJair;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-LLSF3EV\SQLEXPRESS.FerreteriaJair 1]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{C5F85AFD-C4CE-42E3-BB86-6595BC1F799D}"
-      DTS:ObjectName="DESKTOP-LLSF3EV\SQLEXPRESS.FerreteriaJair 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-LLSF3EV\SQLEXPRESS;Initial Catalog=FerreteriaJair;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-LLSF3EV\SQLEXPRESS.FerreteriaJair1]"
-      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-      DTS:DTSID="{41896961-29F3-4FC7-8339-D4787AEF453B}"
-      DTS:ObjectName="DESKTOP-LLSF3EV\SQLEXPRESS.FerreteriaJair1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=DESKTOP-LLSF3EV\SQLEXPRESS;Initial Catalog=FerreteriaJair;Integrated Security=True;Application Name=SSIS-Package-{41896961-29F3-4FC7-8339-D4787AEF453B}DESKTOP-LLSF3EV\SQLEXPRESS.FerreteriaJair1;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-LLSF3EV\SQLEXPRESS.FerreteriaJair1 1]"
-      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-      DTS:DTSID="{711DF53D-09CF-4EC6-AF60-DFF549F33947}"
-      DTS:ObjectName="DESKTOP-LLSF3EV\SQLEXPRESS.FerreteriaJair1 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=DESKTOP-LLSF3EV\SQLEXPRESS;Initial Catalog=FerreteriaJair;Integrated Security=True;Application Name=SSIS-Package-{711DF53D-09CF-4EC6-AF60-DFF549F33947}DESKTOP-LLSF3EV\SQLEXPRESS.FerreteriaJair1 1;" />
+          DTS:ConnectionString="Data Source=DESKTOP-DNRC51T;User ID=sa;Initial Catalog=Ferreteria;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQr1XXq7A80q3Xm3oWsC7zQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAZNClZttcwrQSx44DM4sR7SpF7wBd8WWhOIb+MLxGNxgAAAAAOgAAAAAIAACAAAADPFPc69r8NAbWsoX3ZJQpg2xyiPzYzkirYqXL0WvthzBAAAADeQzj2vcF8Ij2cmxFCTnqVQAAAAFOs4Y3a8Aisr677pnqh9Fs4VfjBT5Yy1tCEH/vhvIzfyWLgAyOALfwllHfK7iqPR1LEFpluD15dD2MQWj8K6gI</DTS:Password>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -450,7 +298,7 @@
                   dataType="System.Int32"
                   description="Especifica el modo utilizado para obtener acceso a la base de datos."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
@@ -471,8 +319,8 @@
               <connections>
                 <connection
                   refId="Package\Cliente\Destino de OLE DB.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LLSF3EV.DimFerreteria]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LLSF3EV.DimFerreteria]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LLSF3EV.DimFerreteria 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LLSF3EV.DimFerreteria 1]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -854,7 +702,7 @@ from Cliente cli  INNER JOIN Tipo_Documento td on (cli.id_tipo_de_doc=td.id_tipo
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{DDB06DF8-8D1B-472C-A271-C9254E3FD1B1}"
+          SQLTask:Connection="{94291AD6-4A79-4451-8378-EC1BC6D1E7BA}"
           SQLTask:SqlStatementSource="delete from Ventas;&#x9;&#x9;&#x9;&#x9;   &#xA;delete from DimProductos;&#xA;delete from DimCliente;&#xA;delete from FechaDim;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -1089,8 +937,8 @@ from Cliente cli  INNER JOIN Tipo_Documento td on (cli.id_tipo_de_doc=td.id_tipo
               <connections>
                 <connection
                   refId="Package\Fecha\Destino de OLE DB.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LLSF3EV.DimFerreteria]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LLSF3EV.DimFerreteria]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LLSF3EV.DimFerreteria 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LLSF3EV.DimFerreteria 1]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -2082,7 +1930,7 @@ from Producto pro INNER JOIN Categoria cat ON (pro.id_categoria=cat.id_categoria
                   dataType="System.Int32"
                   description="Especifica el modo utilizado para obtener acceso a la base de datos."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
@@ -2103,8 +1951,8 @@ from Producto pro INNER JOIN Categoria cat ON (pro.id_categoria=cat.id_categoria
               <connections>
                 <connection
                   refId="Package\Ventas\Destino de OLE DB.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LLSF3EV.DimFerreteria]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LLSF3EV.DimFerreteria]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-LLSF3EV.DimFerreteria 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-LLSF3EV.DimFerreteria 1]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
@@ -2447,63 +2295,63 @@ from Venta As V INNER JOIN Detalle_venta dv on (v.id_venta = dv.id_venta)
       DTS:To="Package\Ventas" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
-<!--If you manually edit this section and make a mistake, you can delete it. -->
-<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
 <Objects
   Version="8">
-  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="111,42"
+          Size="110.666666666667,42"
           Id="Package\Cliente"
-          TopLeft="279,164" />
+          TopLeft="279,165.299999976754" />
         <NodeLayout
-          Size="163,42"
+          Size="162.666666666667,42"
           Id="Package\Execute SQL Task"
-          TopLeft="247,57" />
+          TopLeft="248.249999981374,57" />
         <NodeLayout
-          Size="107,42"
+          Size="106.666666666667,42"
           Id="Package\Fecha"
           TopLeft="425,166" />
         <NodeLayout
-          Size="121,42"
+          Size="121.333333333334,42"
           Id="Package\Producto"
           TopLeft="96,159" />
         <NodeLayout
-          Size="111,42"
+          Size="110.666666666667,42"
           Id="Package\Ventas"
           TopLeft="276,277" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="289.75,99">
+          TopLeft="290.91666664804,99">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-133.25,60"
+              EndConnector="-134.249999981374,60"
               Start="0,0"
-              End="-133.25,52.5">
+              End="-134.249999981374,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.6438631790745" />
+                    End="0,16.6451612903226" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,16.6438631790745"
-                    Point2="0,20.6438631790745"
-                    Point3="-4,20.6438631790745" />
+                    Point1="0,16.6451612903226"
+                    Point2="0,20.6451612903226"
+                    Point3="-4,20.6451612903226" />
                   <mssgle:LineSegment
-                    End="-129.25,20.6438631790745" />
+                    End="-130.249999981374,20.6451612903226" />
                   <mssgle:CubicBezierSegment
-                    Point1="-129.25,20.6438631790745"
-                    Point2="-133.25,20.6438631790745"
-                    Point3="-133.25,24.6438631790745" />
+                    Point1="-130.249999981374,20.6451612903226"
+                    Point2="-134.249999981374,20.6451612903226"
+                    Point3="-134.249999981374,24.6451612903226" />
                   <mssgle:LineSegment
-                    End="-133.25,52.5" />
+                    End="-134.249999981374,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2514,30 +2362,18 @@ from Venta As V INNER JOIN Detalle_venta dv on (v.id_venta = dv.id_venta)
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="354.333333333333,99">
+          TopLeft="331.95833332402,99">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-19.8333333333333,65"
+              EndConnector="0,66.2999999767542"
               Start="0,0"
-              End="-19.8333333333333,57.5">
+              End="0,58.7999999767542">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.3791008505468" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.3791008505468"
-                    Point2="0,26.3791008505468"
-                    Point3="-4,26.3791008505468" />
-                  <mssgle:LineSegment
-                    End="-15.8333333333333,26.3791008505468" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-15.8333333333333,26.3791008505468"
-                    Point2="-19.8333333333333,26.3791008505468"
-                    Point3="-19.8333333333333,30.3791008505468" />
-                  <mssgle:LineSegment
-                    End="-19.8333333333333,57.5" />
+                    End="0,58.7999999767542" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2548,30 +2384,30 @@ from Venta As V INNER JOIN Detalle_venta dv on (v.id_venta = dv.id_venta)
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="367.25,99">
+          TopLeft="368.249999981374,99">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="111.25,67"
+              EndConnector="110.08333335196,67"
               Start="0,0"
-              End="111.25,59.5">
+              End="110.08333335196,59.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.0523138832998" />
+                    End="0,19.0537634408602" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.0523138832998"
-                    Point2="0,23.0523138832998"
-                    Point3="4,23.0523138832998" />
+                    Point1="0,19.0537634408602"
+                    Point2="0,23.0537634408602"
+                    Point3="4,23.0537634408602" />
                   <mssgle:LineSegment
-                    End="107.25,23.0523138832998" />
+                    End="106.08333335196,23.0537634408602" />
                   <mssgle:CubicBezierSegment
-                    Point1="107.25,23.0523138832998"
-                    Point2="111.25,23.0523138832998"
-                    Point3="111.25,27.0523138832998" />
+                    Point1="106.08333335196,23.0537634408602"
+                    Point2="110.08333335196,23.0537634408602"
+                    Point3="110.08333335196,27.0537634408602" />
                   <mssgle:LineSegment
-                    End="111.25,59.5" />
+                    End="110.08333335196,59.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2616,18 +2452,18 @@ from Venta As V INNER JOIN Detalle_venta dv on (v.id_venta = dv.id_venta)
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="333,206">
+          TopLeft="332.833333333333,207.299999976754">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,71"
+              EndConnector="0,69.7000000232458"
               Start="0,0"
-              End="0,63.5">
+              End="0,62.2000000232458">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,63.5" />
+                    End="0,62.2000000232458" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2683,13 +2519,13 @@ from Venta As V INNER JOIN Detalle_venta dv on (v.id_venta = dv.id_venta)
           Id="Package\Cliente\Origen de OLE DB"
           TopLeft="209,8" />
         <NodeLayout
-          Size="175,42"
+          Size="174.666666666667,42"
           Id="Package\Cliente\Conversión de datos"
           TopLeft="249,100" />
         <NodeLayout
           Size="168,42"
           Id="Package\Cliente\Destino de OLE DB"
-          TopLeft="308,203" />
+          TopLeft="310,204" />
         <EdgeLayout
           Id="Package\Cliente.Paths[Salida de origen de OLE DB]"
           TopLeft="291,50">
@@ -2726,30 +2562,30 @@ from Venta As V INNER JOIN Detalle_venta dv on (v.id_venta = dv.id_venta)
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Cliente.Paths[Salida de conversión de datos]"
-          TopLeft="336.5,142">
+          TopLeft="336.333333333333,142">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="55.5,61"
+              EndConnector="57.6666666666667,62"
               Start="0,0"
-              End="55.5,53.5">
+              End="57.6666666666667,54.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.5" />
+                    End="0,27" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,26.5"
-                    Point2="0,30.5"
-                    Point3="4,30.5" />
+                    Point1="0,27"
+                    Point2="0,31"
+                    Point3="4,31" />
                   <mssgle:LineSegment
-                    End="51.5,30.5" />
+                    End="53.6666666666667,31" />
                   <mssgle:CubicBezierSegment
-                    Point1="51.5,30.5"
-                    Point2="55.5,30.5"
-                    Point3="55.5,34.5" />
+                    Point1="53.6666666666667,31"
+                    Point2="57.6666666666667,31"
+                    Point3="57.6666666666667,35" />
                   <mssgle:LineSegment
-                    End="55.5,53.5" />
+                    End="57.6666666666667,54.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2792,7 +2628,7 @@ from Venta As V INNER JOIN Detalle_venta dv on (v.id_venta = dv.id_venta)
           Id="Package\Fecha\Destino de OLE DB"
           TopLeft="328,244" />
         <NodeLayout
-          Size="175,42"
+          Size="174.666666666667,42"
           Id="Package\Fecha\Conversión de datos"
           TopLeft="228,149" />
         <NodeLayout
@@ -2901,7 +2737,7 @@ from Venta As V INNER JOIN Detalle_venta dv on (v.id_venta = dv.id_venta)
           Id="Package\Producto\Destino de OLE DB"
           TopLeft="216,212" />
         <NodeLayout
-          Size="175,42"
+          Size="174.666666666667,42"
           Id="Package\Producto\Conversión de datos"
           TopLeft="75,109" />
         <NodeLayout
@@ -3010,13 +2846,13 @@ from Venta As V INNER JOIN Detalle_venta dv on (v.id_venta = dv.id_venta)
           Id="Package\Ventas\Origen de OLE DB"
           TopLeft="138,49" />
         <NodeLayout
-          Size="175,42"
+          Size="174.666666666667,42"
           Id="Package\Ventas\Conversión de datos"
           TopLeft="182,124" />
         <NodeLayout
           Size="168,42"
           Id="Package\Ventas\Destino de OLE DB"
-          TopLeft="232,213" />
+          TopLeft="233,212" />
         <EdgeLayout
           Id="Package\Ventas.Paths[Salida de origen de OLE DB]"
           TopLeft="220,91">
@@ -3053,30 +2889,30 @@ from Venta As V INNER JOIN Detalle_venta dv on (v.id_venta = dv.id_venta)
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Ventas.Paths[Salida de conversión de datos]"
-          TopLeft="269.5,166">
+          TopLeft="269.333333333333,166">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="46.5,47"
+              EndConnector="47.6666666666667,46"
               Start="0,0"
-              End="46.5,39.5">
+              End="47.6666666666667,38.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.5" />
+                    End="0,19" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.5"
-                    Point2="0,23.5"
-                    Point3="4,23.5" />
+                    Point1="0,19"
+                    Point2="0,23"
+                    Point3="4,23" />
                   <mssgle:LineSegment
-                    End="42.5,23.5" />
+                    End="43.6666666666667,23" />
                   <mssgle:CubicBezierSegment
-                    Point1="42.5,23.5"
-                    Point2="46.5,23.5"
-                    Point3="46.5,27.5" />
+                    Point1="43.6666666666667,23"
+                    Point2="47.6666666666667,23"
+                    Point3="47.6666666666667,27" />
                   <mssgle:LineSegment
-                    End="46.5,39.5" />
+                    End="47.6666666666667,38.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

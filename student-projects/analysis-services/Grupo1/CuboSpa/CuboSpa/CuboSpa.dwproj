@@ -60,7 +60,7 @@
           <ConfigurationSetting>
             <Id>DM Spa</Id>
             <Name>DM Spa</Name>
-            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=LAPTOP-NCA929MA;Password=;User ID=;Initial Catalog=DMSpa</Value>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=DESKTOP-DNRC51T;Password=;User ID=;Initial Catalog=DMSpa</Value>
           </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>

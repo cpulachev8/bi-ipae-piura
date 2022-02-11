@@ -7,12 +7,12 @@
   DTS:CreatorName="DESKTOP-J5AJLQ0\junio"
   DTS:DTSID="{621CDFD7-805A-40B5-A8C2-552B17186D52}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.167"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="10250"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{00FDCA75-0F38-4C09-905A-E208361FDCB5}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{1F01C1A0-71C6-4123-B716-A3DD9BDBE4CC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,7 +25,12 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-J5AJLQ0;Initial Catalog=DB_JIMDUR;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-DNRC51T;User ID=sa;Initial Catalog=DB_JIMDUR;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQr1XXq7A80q3Xm3oWsC7zQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACx8VhcciZAqkUPYCbOr2l5DkhEwtktovVfSUR+Fp4jJQAAAAAOgAAAAAIAACAAAAAh+FUk+9VRwsG5H7ah2RdgWw8rTWxI6ieGfPHTsWdwEhAAAAA4zceRbc5Eueb7EfJlj2X5QAAAAMqWaDvdzZAWx3KuvorxlU6dUw6TVmOdEmAMAYk7p44PDbjxu5pLcslRruQ/JaYic3y8GlMEBTrxFTWIa1ytLV4</DTS:Password>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -37,7 +42,12 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-J5AJLQ0;Initial Catalog=DM_JIMDUR;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-DNRC51T;User ID=sa;Initial Catalog=DM_JIMDUR;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQr1XXq7A80q3Xm3oWsC7zQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAM1JkFAfYXtk3hvvyC309BGP0AFyctpY9Yi5HWI5AsOwAAAAAOgAAAAAIAACAAAACKBrwkrdy43Ls+S2SXcg50eq8E8isCXnOZraTjfqqschAAAAA/WLYYukzFRDh3gPnPk4XkQAAAAOpaMN/l8agea5FlLOCWQRFIgRi+T7liFYQg6NASZhZelYAkMn/qElPsJxxwCgROjdM9bLB0tE9587KqvgIDgUk</DTS:Password>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -2180,23 +2190,23 @@ FROM DB_JIMDUR.dbo.ARTICULO artDB INNER JOIN DB_JIMDUR.dbo.CATEGORIA catDB ON (a
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="120.8,49.6"
+          Size="120.666666666667,49.3333333333334"
           Id="Package\Cliente"
           TopLeft="477.857150995002,194.235296841724" />
         <NodeLayout
-          Size="124.8,48.8"
+          Size="124.666666666667,48.6666666666667"
           Id="Package\Producto"
           TopLeft="282.857147674171,195.764708627879" />
         <NodeLayout
-          Size="153.6,54.4"
+          Size="153.333333333334,54.6666666666667"
           Id="Package\Tarea Ejecutar SQL"
           TopLeft="456.428579201504,81.0588246662311" />
         <NodeLayout
-          Size="133.6,52"
+          Size="133.333333333334,52"
           Id="Package\Tiempo"
           TopLeft="664.285725598433,195.764708627879" />
         <NodeLayout
-          Size="139.2,52"
+          Size="139.333333333334,52"
           Id="Package\Venta"
           TopLeft="472.142865183402,307.411769017216" />
         <EdgeLayout
@@ -2715,15 +2725,15 @@ FROM DB_JIMDUR.dbo.ARTICULO artDB INNER JOIN DB_JIMDUR.dbo.CATEGORIA catDB ON (a
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="149.6,41.6"
+          Size="149.333333333334,41.3333333333334"
           Id="Package\Venta\OLE DB Source"
           TopLeft="228.357142857143,50.5" />
         <NodeLayout
-          Size="155.2,41.6"
+          Size="155.333333333334,41.3333333333334"
           Id="Package\Venta\Data Conversion"
           TopLeft="355,139.285714285714" />
         <NodeLayout
-          Size="170.4,41.6"
+          Size="170.666666666667,41.3333333333334"
           Id="Package\Venta\OLE DB Destination"
           TopLeft="482.142857142857,248.571428571429" />
         <EdgeLayout

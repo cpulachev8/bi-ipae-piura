@@ -52,14 +52,14 @@
           <ConfigurationSetting>
             <Id>DM_JIMDUR</Id>
             <Name>DM_JIMDUR</Name>
-            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=DESKTOP-J5AJLQ0;Integrated Security=SSPI;Initial Catalog=DM_JIMDUR</Value>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=DESKTOP-DNRC51T;Password=;User ID=;Initial Catalog=DM_JIMDUR</Value>
           </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>
           <ConfigurationSetting>
             <Id>DM_JIMDUR</Id>
             <Name>DM_JIMDUR</Name>
-            <Value xsi:type="xsd:int">0</Value>
+            <Value xsi:type="xsd:int">1</Value>
           </ConfigurationSetting>
         </ConnectionSecurityMappings>
       </Options>

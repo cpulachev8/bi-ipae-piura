@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{F2B3A2DE-81CC-40E9-87E1-F17F6C875257}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{EF93E5F1-0381-4CBE-AE85-28465E99BE19}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,11 +25,11 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=LAPTOP-NCA929MA;User ID=sa;Initial Catalog=DMSpa;Provider=SQLNCLI11.1;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=DESKTOP-DNRC51T;User ID=sa;Initial Catalog=DMSpa;Provider=SQLNCLI11.1;Auto Translate=False;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAb15D/eCVQkWq9S4ba5FFBAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACSeG+7rNZKTtLhfwhbOEZRHlnVUMvR7Cxc8zYD2SzgcgAAAAAOgAAAAAIAACAAAAChNs99Lj6XTXobowPJTL9m3RySXAvNh5IRBE9bEf5QjxAAAACD5l7cLwULP8ShAbYmOSbWQAAAAPmZIZk1uzWd3+rr8jE7FYE1skY06ZbxCzXf+L74OHqXSza/mySSVDEbNErQiPqjx95wPEMDESHsNGdnxZn+eYc</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQr1XXq7A80q3Xm3oWsC7zQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC8ptXAU+zDkzc0S0fAIMr//1oNVqsqoJFqurmTODim1QAAAAAOgAAAAAIAACAAAADK+BbQHfRjG/ygaljRdEPa0+qEs2ux8XVtZRdC0zZZ2hAAAADC2Ym3z2be+kd19njC3jE6QAAAABwfiav1tAgru2b0C0ip4PX0sGMVzFnIrIiAc2qvO+6KXo51ngrR9bij1mCmiSqBqX7Lm/kk46PFoXx3+zJtUjE</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,11 +42,11 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=LAPTOP-NCA929MA;User ID=sa;Initial Catalog=spa clase;Provider=SQLNCLI11.1;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=DESKTOP-DNRC51T;User ID=sa;Initial Catalog=spa clase;Provider=SQLNCLI11.1;Auto Translate=False;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAb15D/eCVQkWq9S4ba5FFBAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADqBXc8bXAsxUOPklLdepEDXB720Xy9ePQ4gu88b7euBwAAAAAOgAAAAAIAACAAAADevx4GInQZhiQHhr6dE7FjLpf4F/ZM3Zn8YMnwsqNeWhAAAAD++AZGAnM0oVbiaxZRzFTQQAAAAFZAi3lURyKSOrkMRBVFdhHbtctdDOgxVF7nfP9fXph/J6GLVaQUdIcYiK/Py9kkcUp9Pj48clQuWKhBYXpkQnA</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQr1XXq7A80q3Xm3oWsC7zQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAl+8aK2G0Y5hDXq+QDfM0DD6WaaWd8e2PwVNuCBOdn1wAAAAAOgAAAAAIAACAAAAB2GneMNSpjDuAQG/nY0EEo9t797T7b9ZD11pe6mURY2BAAAADusRimViTB1S7kW+h1SGl+QAAAAIb+aKS19II3+193GfPUXpv1XlAdk54am/udnxS/A6JBdarsC6nBDRFxQuEyATgN7h1HEaVaD078hZ+28V9ZDpE</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -2392,31 +2392,31 @@ from Cliente c</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="140.8,41.6"
+          Size="140.666666666667,41.3333333333334"
           Id="Package\LLenar Fecha"
           TopLeft="636.210328294915,179.599675721432" />
         <NodeLayout
-          Size="152,41.6"
+          Size="152,41.3333333333334"
           Id="Package\Llenar Producto"
           TopLeft="807.638902642898,179.599675721432" />
         <NodeLayout
-          Size="161.6,41.6"
+          Size="161.333333333334,41.3333333333334"
           Id="Package\Llenar Resultados"
           TopLeft="454.464293453767,351.233665056639" />
         <NodeLayout
-          Size="151.2,41.6"
+          Size="151.333333333334,41.3333333333334"
           Id="Package\Llenar Servicios"
           TopLeft="110.996033542619,183.230394649464" />
         <NodeLayout
-          Size="164.8,41.6"
+          Size="164.666666666667,41.3333333333334"
           Id="Package\LLenar Trabajador"
           TopLeft="451.289690225101,177.05065607784" />
         <NodeLayout
-          Size="144.8,41.6"
+          Size="144.666666666667,41.3333333333334"
           Id="Package\Lllenar Cliente"
           TopLeft="299.702386056283,177.900329292371" />
         <NodeLayout
-          Size="169.6,41.6"
+          Size="169.333333333334,41.3333333333334"
           Id="Package\Tarea Ejecutar SQL"
           TopLeft="446.428579031205,29.632353356759" />
         <EdgeLayout

@@ -1,4 +1,4 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="19dc3cf9-fd11-42e4-8cab-c3a705dc21bf" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="da7a3c84-38e8-45b6-8dda-6fde4d005d64" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Player DIM</ID>
   <Name>Player DIM</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -6,6 +6,32 @@
   <Annotations>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-3674" scrolltop="-6747" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10389" y="16087" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900180380100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Player_DIM" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="2593" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000210a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Player_DIM" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
@@ -21,15 +47,15 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-      <Value>0</Value>
+      <Value>-3674</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>0</Value>
+      <Value>-6747</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
-      <Value>0</Value>
+      <Value>20</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
@@ -42,30 +68,109 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="64dc19df-d87d-4bdf-a252-3b99bb0ee2a3">
-    <DataSourceViewID>View_VideogameBD-DM</DataSourceViewID>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="76e7e0b4-feae-4602-9590-17c89c0ab2b9">
+    <DataSourceViewID>Videogame BD-DM</DataSourceViewID>
   </Source>
-  <ErrorConfiguration dwd:design-time-name="1d3cb85b-f1c9-4fe1-b490-04e12f24758c">
+  <ErrorConfiguration dwd:design-time-name="1685ab4b-2b01-4b70-8270-f1353bd1d1fc">
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="2700fcbe-9fd2-4c28-8038-4fd761044477">
+    <Attribute dwd:design-time-name="732e72fe-e061-4003-b6e0-8626eaf232bf">
       <ID>Playerdim Id</ID>
       <Name>Playerdim Id</Name>
       <Usage>Key</Usage>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="27ba0813-d426-4d09-963b-52745e84e020">
+        <KeyColumn dwd:design-time-name="cc4685dd-cf0e-427f-9c4e-1c6dfb8dc7dd">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="ac2f4759-18cd-4ad1-a402-8ca4db842bdf">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f06d420c-c6b3-439d-80e9-313e4531661f">
             <TableID>dbo_Player_DIM</TableID>
             <ColumnID>playerdim_id</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="23df9eea-03d9-4783-8bf6-90f6b050f1c2">
+          <AttributeID>Player Id</AttributeID>
+          <Name>Player Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="00c1cf85-4e6c-444d-9d47-8d00290b593b">
+          <AttributeID>Player Age</AttributeID>
+          <Name>Player Age</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c2b5d866-9d6c-4604-a8bf-15a430fcc3bc">
+          <AttributeID>Player Gender</AttributeID>
+          <Name>Player Gender</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9cbfda0f-1af4-43ac-bdec-164b072c994a">
+          <AttributeID>Rated Stars</AttributeID>
+          <Name>Rated Stars</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
       <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0e868897-bcc4-426d-b845-43c28d06a47d">
+      <ID>Player Id</ID>
+      <Name>Player Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2a7e6a1d-ca98-4fb6-9c7c-975b4dbb3f4a">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="dd359ef3-2ea7-4e8d-89a7-7853056b6cd2">
+            <TableID>dbo_Player_DIM</TableID>
+            <ColumnID>player_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="fa62011c-056e-4d9f-942f-9dee3fc65806">
+      <ID>Player Age</ID>
+      <Name>Player Age</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0a52fdce-fa33-4182-9e6b-789f8ecd7bd1">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="04deac56-17a1-4aa3-9783-9fd5c362a9dd">
+            <TableID>dbo_Player_DIM</TableID>
+            <ColumnID>player_age</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ec014f57-7099-46a6-849d-cf05796af1c7">
+      <ID>Player Gender</ID>
+      <Name>Player Gender</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4c26f9dc-08e8-4bc1-b793-f62411133c60">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5e804356-1d12-4ea2-b434-7a6a9175b9cd">
+            <TableID>dbo_Player_DIM</TableID>
+            <ColumnID>player_gender</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f9d0366f-61a0-4c8c-b2b4-e16456ab8a7e">
+      <ID>Rated Stars</ID>
+      <Name>Rated Stars</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d3888688-7a98-4c27-8728-d6bbb3bbb100">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d6cfba80-c63d-4e8b-8bf5-7e860c18754f">
+            <TableID>dbo_Player_DIM</TableID>
+            <ColumnID>rated_stars</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>

@@ -8,12 +8,12 @@
   </Database>
   <Cubes>
     <ProjectItem>
-      <Name>Cube_VideogameBD-DM.cube</Name>
-      <FullPath>Cube_VideogameBD-DM.cube</FullPath>
+      <Name>Videogame BD-DM.cube</Name>
+      <FullPath>Videogame BD-DM.cube</FullPath>
       <Dependencies>
         <ProjectItem>
-          <Name>Cube_VideogameBD-DM.partitions</Name>
-          <FullPath>Cube_VideogameBD-DM.partitions</FullPath>
+          <Name>Videogame BD-DM.partitions</Name>
+          <FullPath>Videogame BD-DM.partitions</FullPath>
         </ProjectItem>
       </Dependencies>
     </ProjectItem>
@@ -44,8 +44,8 @@
   </DataSources>
   <DataSourceViews>
     <ProjectItem>
-      <Name>View_VideogameBD-DM.dsv</Name>
-      <FullPath>View_VideogameBD-DM.dsv</FullPath>
+      <Name>Videogame BD-DM.dsv</Name>
+      <FullPath>Videogame BD-DM.dsv</FullPath>
     </ProjectItem>
   </DataSourceViews>
   <Configurations>
@@ -56,14 +56,14 @@
           <ConfigurationSetting>
             <Id>Videogame_BD-DM</Id>
             <Name>Videogame_BD-DM</Name>
-            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=DESKTOP-M19F1KH\ANDERSON;Integrated Security=SSPI;Initial Catalog=VideogameBD-DM</Value>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=DESKTOP-DNRC51T;Password=;User ID=;Initial Catalog=VideogameBD-DM</Value>
           </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>
           <ConfigurationSetting>
             <Id>Videogame_BD-DM</Id>
             <Name>Videogame_BD-DM</Name>
-            <Value xsi:type="xsd:int">0</Value>
+            <Value xsi:type="xsd:int">1</Value>
           </ConfigurationSetting>
         </ConnectionSecurityMappings>
       </Options>

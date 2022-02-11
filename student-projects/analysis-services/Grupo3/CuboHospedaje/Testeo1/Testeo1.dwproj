@@ -56,7 +56,7 @@
           <ConfigurationSetting>
             <Id>Data Mart Hospedaje</Id>
             <Name>Data Mart Hospedaje</Name>
-            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=DESKTOP-S7B48MN;Password=;User ID=;Initial Catalog=DataMartHospedaje</Value>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=DESKTOP-DNRC51T\SQLEXPRESS;Password=;User ID=;Initial Catalog=DataMartHospedaje</Value>
           </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>

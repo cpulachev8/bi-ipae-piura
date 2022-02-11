@@ -11,8 +11,8 @@
   DTS:LocaleID="10250"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{3DBFCB6A-1CCA-498D-86A4-36124E94DC88}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{FE67B30D-6A33-4F82-966C-F1AA6E195EBD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,7 +25,12 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-M19F1KH\ANDERSON;Initial Catalog=VideogameBD;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-DNRC51T;User ID=sa;Initial Catalog=VideogameBD;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQr1XXq7A80q3Xm3oWsC7zQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACglp3eKlt+CC/U+3QyujcLbTeRUzopROwN3njiU7VbTAAAAAAOgAAAAAIAACAAAAC4hKZX/mgua1pmgKN00ELU40fItWiAzgIRVRD016pv0RAAAABwuh2mq8Zzi6NfKnMJaj/3QAAAALbDdVDVC4N2j+5xSY0Won9V9fMR6qDW4WC05xWIAaAd1jwVef+CIk93VRRjTrebVg9wiRma2MEeIe06gCax4c4</DTS:Password>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -37,7 +42,12 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-M19F1KH\ANDERSON;Initial Catalog=VideogameBD-DM;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-DNRC51T;User ID=sa;Initial Catalog=VideogameBD-DM;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQr1XXq7A80q3Xm3oWsC7zQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD/CcQjttWFH3HxAf1M1DuzFEAB/eFkhbaIPLghsCLcWgAAAAAOgAAAAAIAACAAAAAoomK/W9YjhjokCKbN9GixXt4Rn5YADzNArXFt3VyKZRAAAACWRzAOrkhvB+M5bK4l6feVQAAAAPwuQTZn7favZiYuQjbWxz5DPLR4HbQYJApWkv9XXUQHnMwY5X6/U8aRgCDC7g56eSeHDDlgWoSl0Q7+y4Tf9cU</DTS:Password>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -1992,15 +2002,15 @@ GROUP BY tlg.log_id,tlg.duration_minutes, dp.playerdim_id, dl.leveldim_id, dt.ti
           Id="Package\Fill LevelDim"
           TopLeft="473,206" />
         <NodeLayout
-          Size="143,42"
+          Size="142.666666666667,42"
           Id="Package\Fill PlayerDim"
           TopLeft="214.5,204.5" />
         <NodeLayout
-          Size="137,42"
+          Size="137.333333333334,42"
           Id="Package\Fill TimeDim"
           TopLeft="693,212" />
         <NodeLayout
-          Size="157,42"
+          Size="157.333333333334,42"
           Id="Package\Fill UbicationDim"
           TopLeft="934,220" />
         <NodeLayout
@@ -2363,22 +2373,22 @@ GROUP BY tlg.log_id,tlg.duration_minutes, dp.playerdim_id, dl.leveldim_id, dt.ti
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="164,42"
-          Id="Package\Fill PlayerDim\Origen de OLE DB"
-          TopLeft="278,145" />
-        <NodeLayout
           Size="168,42"
           Id="Package\Fill PlayerDim\Destino de OLE DB"
           TopLeft="308,422" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Fill PlayerDim\Origen de OLE DB"
+          TopLeft="282.374999934807,145" />
         <EdgeLayout
           Id="Package\Fill PlayerDim.Paths[Salida de origen de OLE DB]"
-          TopLeft="360,187">
+          TopLeft="364.374999934807,187">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="32,235"
+              EndConnector="27.6250000651925,235"
               Start="0,0"
-              End="32,227.5">
+              End="27.6250000651925,227.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2389,13 +2399,13 @@ GROUP BY tlg.log_id,tlg.duration_minutes, dp.playerdim_id, dl.leveldim_id, dt.ti
                     Point2="0,117.5"
                     Point3="4,117.5" />
                   <mssgle:LineSegment
-                    End="28,117.5" />
+                    End="23.6250000651925,117.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="28,117.5"
-                    Point2="32,117.5"
-                    Point3="32,121.5" />
+                    Point1="23.6250000651925,117.5"
+                    Point2="27.6250000651925,117.5"
+                    Point3="27.6250000651925,121.5" />
                   <mssgle:LineSegment
-                    End="32,227.5" />
+                    End="27.6250000651925,227.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

@@ -1,0 +1,174 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="082465ec-f7c8-454c-844f-6424bbc9e0e3" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Videogame BD-DM</ID>
+  <Name>Videogame BD-DM</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Videogame_BD-DM</DataSourceID>
+  <Schema>
+    <xs:schema id="Videogame_x0020_BD-DM" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Videogame_x0020_BD-DM" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="6dc37320-d75e-45d4-b95a-99cbd0825217">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Level_DIM" msprop:design-time-name="1803e3ea-6305-4f86-8ce9-3ab9d69f8e5b" msprop:DbTableName="Level_DIM" msprop:FriendlyName="Level_DIM" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="leveldim_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="f0de796c-b327-45da-bb5c-4f5546b962e0" msprop:DbColumnName="leveldim_id" msprop:FriendlyName="leveldim_id" type="xs:int" />
+                  <xs:element name="level_id" msprop:design-time-name="e892cd5a-c0c5-4109-91e9-c0479ee39ad0" msprop:DbColumnName="level_id" msprop:FriendlyName="level_id" type="xs:int" />
+                  <xs:element name="levellabel_name" msprop:design-time-name="ea6d7f22-0c3c-45da-ae28-96dab3d96191" msprop:DbColumnName="levellabel_name" msprop:FriendlyName="levellabel_name">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="25" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="levelgroup_name" msprop:design-time-name="675ec053-bfbe-46e1-9796-eafdc46e7051" msprop:DbColumnName="levelgroup_name" msprop:FriendlyName="levelgroup_name">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="25" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="played_times" msprop:design-time-name="89e9d49c-b83f-4841-90f2-581805f14560" msprop:DbColumnName="played_times" msprop:FriendlyName="played_times" type="xs:int" />
+                  <xs:element name="duration_average_hour" msprop:design-time-name="2d7d65f1-223d-453d-9373-4fbbd7901908" msprop:DbColumnName="duration_average_hour" msprop:FriendlyName="duration_average_hour" type="xs:int" />
+                  <xs:element name="difficulty" msprop:design-time-name="7d022060-9213-441b-9684-824233d87b29" msprop:DbColumnName="difficulty" msprop:FriendlyName="difficulty" type="xs:decimal" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Player_DIM" msprop:design-time-name="8fed0322-ebb2-4b59-86a0-d72981210774" msprop:DbTableName="Player_DIM" msprop:FriendlyName="Player_DIM" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="playerdim_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="8a6d493b-8299-4cf3-9388-96826e65fd60" msprop:DbColumnName="playerdim_id" msprop:FriendlyName="playerdim_id" type="xs:int" />
+                  <xs:element name="player_id" msprop:design-time-name="9c6bc800-c16c-408f-9d33-4f4af36d9ff2" msprop:DbColumnName="player_id" msprop:FriendlyName="player_id" type="xs:int" />
+                  <xs:element name="player_age" msprop:design-time-name="0a0b4c6f-2951-449f-8724-ff7fd351577f" msprop:DbColumnName="player_age" msprop:FriendlyName="player_age" type="xs:int" />
+                  <xs:element name="player_gender" msprop:design-time-name="9ee89bda-6f18-4bf1-9990-d6fb860ecc67" msprop:DbColumnName="player_gender" msprop:FriendlyName="player_gender">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="rated_stars" msprop:design-time-name="dfcaaab4-5cd2-47e7-8f2e-00b6dade2e2b" msprop:DbColumnName="rated_stars" msprop:FriendlyName="rated_stars" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Time_DIM" msprop:design-time-name="33c91ec6-e60a-4dd1-89de-1a49d57bbc94" msprop:DbTableName="Time_DIM" msprop:FriendlyName="Time_DIM" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="timedim_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="5c80ff1c-b4d5-45a3-a23a-8701c9640279" msprop:DbColumnName="timedim_id" msprop:FriendlyName="timedim_id" type="xs:int" />
+                  <xs:element name="datetime" msprop:design-time-name="bd1a2afc-ce3a-400e-861b-9ba1680d6a11" msprop:DbColumnName="datetime" msprop:FriendlyName="datetime" type="xs:dateTime" />
+                  <xs:element name="hour_time" msprop:design-time-name="c910f925-65f8-4afe-9a88-897a6eff012c" msprop:DbColumnName="hour_time" msprop:FriendlyName="hour_time" type="xs:int" />
+                  <xs:element name="day_date" msprop:design-time-name="5c026e63-2fa7-4593-8f62-5213a4290043" msprop:DbColumnName="day_date" msprop:FriendlyName="day_date" type="xs:int" />
+                  <xs:element name="month_int" msprop:design-time-name="b1e21065-f851-47d1-86ae-1afa0878e47e" msprop:DbColumnName="month_int" msprop:FriendlyName="month_int" type="xs:int" />
+                  <xs:element name="year_date" msprop:design-time-name="59acbb4c-87ec-4f2e-9946-8c9fc894402c" msprop:DbColumnName="year_date" msprop:FriendlyName="year_date" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_TSessions" msprop:design-time-name="7a21ead6-5292-4a04-aea4-00d7963c22cb" msprop:DbTableName="TSessions" msprop:FriendlyName="TSessions" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="playerdim_id" msprop:design-time-name="a26e323d-77df-4227-82f0-7d5d3e6ef33e" msprop:DbColumnName="playerdim_id" msprop:FriendlyName="playerdim_id" type="xs:int" />
+                  <xs:element name="leveldim_id" msprop:design-time-name="7182e75d-2edf-405a-a663-fab72c85a4c3" msprop:DbColumnName="leveldim_id" msprop:FriendlyName="leveldim_id" type="xs:int" />
+                  <xs:element name="timedim_id" msprop:design-time-name="6f0da24e-276e-43a5-94a2-e4dc2cf27844" msprop:DbColumnName="timedim_id" msprop:FriendlyName="timedim_id" type="xs:int" />
+                  <xs:element name="ubicationdim_id" msprop:design-time-name="24cd3c74-496d-4bed-9868-9c8d60b6bb83" msprop:DbColumnName="ubicationdim_id" msprop:FriendlyName="ubicationdim_id" type="xs:int" />
+                  <xs:element name="duration_minutes" msprop:design-time-name="716062a5-84ff-481e-b39f-2eb00348060e" msprop:DbColumnName="duration_minutes" msprop:FriendlyName="duration_minutes" type="xs:decimal" />
+                  <xs:element name="played_levels" msprop:design-time-name="1e5e1dd8-0af5-463d-a232-46992baa524f" msprop:DbColumnName="played_levels" msprop:FriendlyName="played_levels" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Ubication_DIM" msprop:design-time-name="72847531-cf5a-490e-a74a-a313f36a0304" msprop:DbTableName="Ubication_DIM" msprop:FriendlyName="Ubication_DIM" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ubicationdim_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="f42c6b9b-2dbd-4361-a63f-1863d5122ac4" msprop:DbColumnName="ubicationdim_id" msprop:FriendlyName="ubicationdim_id" type="xs:int" />
+                  <xs:element name="country_id" msprop:design-time-name="e7e36eee-606b-4452-a3ce-d5868f5388d4" msprop:DbColumnName="country_id" msprop:FriendlyName="country_id" type="xs:int" />
+                  <xs:element name="country_name" msprop:design-time-name="8632a958-f109-499d-8974-d5c6ac9c7d06" msprop:DbColumnName="country_name" msprop:FriendlyName="country_name">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="region_name" msprop:design-time-name="fd19a372-a36d-4c0f-bd3b-c2dc5e28f72f" msprop:DbColumnName="region_name" msprop:FriendlyName="region_name">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Level_DIM" />
+          <xs:field xpath="leveldim_id" />
+        </xs:unique>
+        <xs:unique name="dbo_Player_DIM_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Player_DIM" />
+          <xs:field xpath="playerdim_id" />
+        </xs:unique>
+        <xs:unique name="dbo_Time_DIM_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Time_DIM" />
+          <xs:field xpath="timedim_id" />
+        </xs:unique>
+        <xs:unique name="dbo_Ubication_DIM_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Ubication_DIM" />
+          <xs:field xpath="ubicationdim_id" />
+        </xs:unique>
+        <xs:keyref name="FK_TSessions_Level_DIM" refer="Constraint1">
+          <xs:selector xpath=".//dbo_TSessions" />
+          <xs:field xpath="leveldim_id" />
+        </xs:keyref>
+        <xs:keyref name="FK_TSessions_Time_DIM" refer="dbo_Time_DIM_Constraint1">
+          <xs:selector xpath=".//dbo_TSessions" />
+          <xs:field xpath="timedim_id" />
+        </xs:keyref>
+        <xs:keyref name="FK_TSessions_Player_DIM" refer="dbo_Player_DIM_Constraint1">
+          <xs:selector xpath=".//dbo_TSessions" />
+          <xs:field xpath="playerdim_id" />
+        </xs:keyref>
+        <xs:keyref name="FK_TSessions_Ubication_DIM" refer="dbo_Ubication_DIM_Constraint1">
+          <xs:selector xpath=".//dbo_TSessions" />
+          <xs:field xpath="ubicationdim_id" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Videogame_x0020_BD-DM xmlns="" />
+  </Schema>
+</DataSourceView>
